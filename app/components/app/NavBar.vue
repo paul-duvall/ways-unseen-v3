@@ -22,7 +22,7 @@ const hideBurgerMenu = (() => {
                 <ul class="burger-menu-items">
                     <li class="burger-menu-item">
                         <NuxtLink
-                        :to="{ name: 'index' }"
+                        to="/"
                         @click="hideBurgerMenu"
                         >
                         Home
@@ -30,7 +30,7 @@ const hideBurgerMenu = (() => {
                     </li>
                     <li class="burger-menu-item">
                         <NuxtLink
-                        :to="{ name: 'About' }"
+                        to="/about"
                         @click="hideBurgerMenu"
                         >
                         About
@@ -38,7 +38,7 @@ const hideBurgerMenu = (() => {
                     </li>
                     <li class="burger-menu-item">
                         <NuxtLink
-                        :to="{ name: 'Commissions' }"
+                        to="/commissions"
                         @click="hideBurgerMenu"
                         >
                         Commissions
@@ -46,7 +46,7 @@ const hideBurgerMenu = (() => {
                     </li>
                     <li class="burger-menu-item">
                         <NuxtLink
-                        :to="{ name: 'Contact' }"
+                        to="/contact"
                         @click="hideBurgerMenu"
                         >
                         Contact
@@ -65,7 +65,7 @@ const hideBurgerMenu = (() => {
                 <div class="line" />
                 <div class="line" />
             </div>
-            <NuxtLink :to="{ name: 'index' }" class="nav-logo">
+            <NuxtLink to="/" class="nav-logo">
                 <img
                     src="/images/logo-white.png"
                     alt="Ways Unseen Logo"
@@ -77,7 +77,7 @@ const hideBurgerMenu = (() => {
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <NuxtLink
-                        :to="{ name: 'index' }"
+                        to="/"
                         class="nav-logo"
                         >
                             Home
@@ -85,7 +85,7 @@ const hideBurgerMenu = (() => {
                     </li>
                     <li class="nav-item">
                         <NuxtLink
-                        :to="{ name: 'About' }"
+                        to="/about"
                         class="nav-link"
                         >
                         About
@@ -93,7 +93,7 @@ const hideBurgerMenu = (() => {
                     </li>
                     <li>
                         <NuxtLink
-                        :to="{ name: 'Contact' }"
+                        to="/contact"
                         class="nav-link"
                         >
                         Contact
@@ -101,7 +101,7 @@ const hideBurgerMenu = (() => {
                     </li>
                     <li>
                         <NuxtLink
-                        :to="{ name: 'Commissions' }"
+                        to="/commissions"
                         class="nav-link"
                         >
                             <Button class="commissions-btn">
