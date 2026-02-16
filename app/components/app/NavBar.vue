@@ -123,27 +123,38 @@ const hideBurgerMenu = (() => {
                     </a>
                     </div>
                     <div>
-                <a
-                        href="https://www.instagram.com/ways.unseen/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Open Instagram profile"
-                        title="Open Instagram profile"
-                    >
-                        <img src="/images/icon-instagram.svg" alt="Instagram" width="28" height="28" />
-                    </a>
+                        <a
+                            href="https://www.instagram.com/ways.unseen/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open Instagram profile"
+                            title="Open Instagram profile"
+                        >
+                            <img src="/images/icon-instagram.svg" alt="Instagram" width="28" height="28" />
+                        </a>
                     </div>
                     <div>
-                <a
-                        href="https://cara.app/waysunseen"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Open Cara profile"
-                        title="Open Cara profile"
-                    >
-                        <img src="/images/icon-cara.svg" alt="Cara" width="28" height="28" />
-                    </a>
-                </div>
+                        <a
+                            href="https://cara.app/waysunseen"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open Cara profile"
+                            title="Open Cara profile"
+                        >
+                            <img src="/images/icon-cara.svg" alt="Cara" width="28" height="28" />
+                        </a>
+                    </div>
+                    <div>
+                        <a
+                            href="https://ways-unseen.itch.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open Itch profile"
+                            title="Open Itch profile"
+                        >
+                            <img src="/images/icon-itch.svg" alt="Itch" width="35" height="35" />
+                        </a>
+                    </div>
                 </div>
                 
             </div>
