@@ -1,54 +1,56 @@
 <template>
-    <img
-        src="/images/banner.jpg"
-        alt="Ways Unseen Homepage Banner"
-        style="width: 100vw"
-    >
-    <h1 style="margin-top: 1rem; text-align: center;">
-        Ways Unseen - creator of hand-drawn fantastical maps,<br> dungeons and unexpected places!
-    </h1>
-    <div class="illustration-examples">
-        <div class="illustration-example">
-            <div class="illustration-example--image illustration-example--image__isometric" />
-            <h3 class="illustration-example--title">Isometric locations</h3>
-            <p>Exterior locations, building and location interiors in an isometric style</p>
+    <div>
+        <img
+            src="/images/banner.jpg"
+            alt="Ways Unseen Homepage Banner"
+            style="width: 100vw"
+        >
+        <h1 style="margin-top: 1rem; text-align: center;">
+            Ways Unseen - creator of hand-drawn fantastical maps,<br> dungeons and unexpected places!
+        </h1>
+        <div class="illustration-examples">
+            <div class="illustration-example">
+                <div class="illustration-example--image illustration-example--image__isometric" />
+                <h3 class="illustration-example--title">Isometric locations</h3>
+                <p>Exterior locations, building and location interiors in an isometric style</p>
+            </div>
+            <div class="illustration-example">
+                <div class="illustration-example--image illustration-example--image__topdown-interior" />
+                <h3 class="illustration-example--title">Top-down interiors</h3>
+                <p class="illustration-example--text">Top-down style maps of building and location interiors</p>
+            </div>
+            <div class="illustration-example">
+                <div class="illustration-example--image illustration-example--image__topdown-exterior" />
+                <h3 class="illustration-example--title">Top-down exteriors</h3>
+                <p class="illustration-example--text">Top-down style maps of exterior locations including towns and settlements</p>
+            </div>
+            <div class="illustration-example">
+                <div class="illustration-example--image illustration-example--image__region" />
+                <h3 class="illustration-example--title">Region maps</h3>
+                <p class="illustration-example--text">Maps of larger areas including settlements, natural features and points of interest</p>
+            </div>
+            <div class="illustration-example">
+                <div class="illustration-example--image illustration-example--image__sideview" />
+                <h3 class="illustration-example--title">Sideview maps</h3>
+                <p class="illustration-example--text">Cutaway-style maps showing interior locations in cross-section</p>
+            </div>
+            <div class="illustration-example">
+                <div class="illustration-example--image illustration-example--image__more" />
+                <h3 class="illustration-example--title">More!</h3>
+                <p class="illustration-example--text">Also able to create hexmaps and maps in other styles - just ask!</p>
+            </div>
         </div>
-        <div class="illustration-example">
-            <div class="illustration-example--image illustration-example--image__topdown-interior" />
-            <h3 class="illustration-example--title">Top-down interiors</h3>
-            <p class="illustration-example--text">Top-down style maps of building and location interiors</p>
-        </div>
-        <div class="illustration-example">
-            <div class="illustration-example--image illustration-example--image__topdown-exterior" />
-            <h3 class="illustration-example--title">Top-down exteriors</h3>
-            <p class="illustration-example--text">Top-down style maps of exterior locations including towns and settlements</p>
-        </div>
-        <div class="illustration-example">
-            <div class="illustration-example--image illustration-example--image__region" />
-            <h3 class="illustration-example--title">Region maps</h3>
-            <p class="illustration-example--text">Maps of larger areas including settlements, natural features and points of interest</p>
-        </div>
-        <div class="illustration-example">
-            <div class="illustration-example--image illustration-example--image__sideview" />
-            <h3 class="illustration-example--title">Sideview maps</h3>
-            <p class="illustration-example--text">Cutaway-style maps showing interior locations in cross-section</p>
-        </div>
-        <div class="illustration-example">
-            <div class="illustration-example--image illustration-example--image__more" />
-            <h3 class="illustration-example--title">More!</h3>
-            <p class="illustration-example--text">Also able to create hexmaps and maps in other styles - just ask!</p>
-        </div>
+        <section class="section section--commission">
+            <h2>Interested in a commission?</h2>
+            <p>I love contributing maps to other people's projects. I've drawn maps for roleplaying games, boardgame conventions, virtual tabletop services and more! Give me a shout if you are interested in commissioning me to create a map for you!</p>
+            <NuxtLink to="/Commissions" class="section-button">Commission Process</NuxtLink>
+        </section>
+        <section class="section section--about">
+            <h2>About me!</h2>
+            <p>I'm a fantasy map illustrator of sorts, living in the east of England in a county called Norfolk. I've always enjoyed drawing, though for much of my life, I have shied away from actually putting pencil to paper. Now that I've started in earnest, I never want to stop!</p>
+            <NuxtLink to="/About" class="section-button">Find out more</NuxtLink>
+        </section>
     </div>
-    <section class="section section--commission">
-        <h2>Interested in a commission?</h2>
-        <p>I love contributing maps to other people's projects. I've drawn maps for roleplaying games, boardgame conventions, virtual tabletop services and more! Give me a shout if you are interested in commissioning me to create a map for you!</p>
-            <NuxtLink to="/commissions" class="section-button">Commission Process</NuxtLink>
-    </section>
-    <section class="section section--about">
-        <h2>About me!</h2>
-        <p>I'm a fantasy map illustrator of sorts, living in the east of England in a county called Norfolk. I've always enjoyed drawing, though for much of my life, I have shied away from actually putting pencil to paper. Now that I've started in earnest, I never want to stop!</p>
-            <NuxtLink to="/about" class="section-button">Find out more</NuxtLink>
-    </section>
 </template>
 
 <style lang="scss">

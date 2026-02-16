@@ -105,7 +105,7 @@ const hideBurgerMenu = (() => {
                         class="nav-link"
                         >
                             <Button class="commissions-btn">
-                            Commissions
+                                Commissions
                             </Button>
                         </NuxtLink>
                     </li>
