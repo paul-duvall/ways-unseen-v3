@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="layout-wrapper">
         <AppNavBar />
         <main class="container">
             <Transition mode="out-in">
@@ -11,6 +11,16 @@
 </template>
 
 <style>
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
