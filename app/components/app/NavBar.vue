@@ -105,7 +105,7 @@ const hideBurgerMenu = (() => {
                         class="nav-link"
                         >
                             <Button class="commissions-btn">
-                                Commissions
+                                Commission a map
                             </Button>
                         </NuxtLink>
                     </li>
@@ -163,6 +163,12 @@ const hideBurgerMenu = (() => {
 </template>
 
 <style scoped>
+.navbar-container {
+    background-color: var(--primary-color);
+    li {
+        font-size: 1.05rem;
+    }
+}
 .nav {
     padding: 0.25rem;
     display: flex;
@@ -223,15 +229,15 @@ const hideBurgerMenu = (() => {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 .line {
-        height: 0.25rem;
-        width: 100%;
-        background-color: var(--primary-color-lightest);
-        border-radius: 25px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: .3s ease;
+    height: 0.25rem;
+    width: 100%;
+    background-color: var(--primary-color-lightest);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
 }
 .burger-menu {
     background-color: var(--primary-color-light);
@@ -258,12 +264,6 @@ const hideBurgerMenu = (() => {
     }
     a:hover {
         color: var(--primary-color-lighter);
-    }
-}
-.navbar-container {
-    background-color: var(--primary-color);
-    li {
-        font-size: 1.05rem;
     }
 }
 .commissions-btn {

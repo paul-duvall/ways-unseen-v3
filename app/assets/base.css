@@ -4,12 +4,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4 {
-    color: var(--secondary-color);
-    font-family: "IM Fell English", serif;
+h1, h2, h3, h4, p {
+    font-family: 'IM Fell English', serif;
 }
 
-h2 { 
+h1 {
+    color: var(--primary-color-lightest);
+}
+
+h2, h3, h4 {
+    color: var(--secondary-color);
     margin-top: 1.5rem;
 }
 
@@ -20,4 +24,9 @@ a {
 a:hover {
     color: var(--primary-color-lighter);
     text-decoration: none;
+}
+
+li {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }

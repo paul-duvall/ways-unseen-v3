@@ -61,13 +61,13 @@ function handleModalClose() {
 </script>
 
 <template>
-    <div>
+    <div style="background-color: var(--primary-color-dark);">
         <img
             src="/images/banner.jpg"
             alt="Ways Unseen Homepage Banner"
             style="width: 100vw"
         >
-        <h1 style="margin-top: 1rem; text-align: center;">
+        <h1 style="margin-top: 2rem; margin-bottom: 2rem; text-align: center;">
             Ways Unseen - creator of hand-drawn fantastical maps,<br> dungeons and unexpected places!
         </h1>
         <div class="illustration-examples">
@@ -155,7 +155,7 @@ function handleModalClose() {
             <div class="section-image">
                 <img src="/images/iso-room-1.png" alt="Isometric room example" />
             </div>
-            <p>I love contributing maps to other people's projects. I've drawn maps for roleplaying games, boardgame conventions, virtual tabletop services and more! Give me a shout if you are interested in commissioning me to create a map for you!</p>
+            <p>I love contributing maps to other people's projects and take great pride in the quality of the illustrations I provide. I've drawn maps for roleplaying games, boardgame conventions, virtual tabletop services, adventure gamebooks and more! Give me a shout if you are interested in working together to create a map for your product!</p>
             <NuxtLink to="/Commissions" class="section-button">Commission Process</NuxtLink>
         </section>
         <section class="section section--about">
@@ -163,18 +163,18 @@ function handleModalClose() {
             <div class="section-image">
                 <img src="/images/iso-room-2.png" alt="Isometric room example 2" />
             </div>
-            <p>I'm a fantasy map illustrator of sorts, living in the east of England in a county called Norfolk. I've always enjoyed drawing, though for much of my life, I have shied away from actually putting pencil to paper. Now that I've started in earnest, I never want to stop!</p>
+            <p>I'm a fantasy map illustrator, living in the east of England in a county called Norfolk. I've always enjoyed drawing, though for much of my life, I have shied away from actually putting pencil to paper. Now that I've started in earnest, I never want to stop! I gain a great deal of pleasure from realise fantastical places in my illustrations...</p>
             <NuxtLink to="/About" class="section-button">Find out more</NuxtLink>
         </section>
-        <Transition name="image-modal" appear>
-            <AppImageModal
-                v-if="showImageModal"
-                :image-src="currentModalImageObject ? currentModalImageObject.imageSrc : ''"
-                :title="currentModalImageObject ? currentModalImageObject.title : ''"
-                @close="handleModalClose"
-            />
-        </Transition>
     </div>
+    <Transition name="image-modal" appear>
+        <AppImageModal
+            v-if="showImageModal"
+            :image-src="currentModalImageObject ? currentModalImageObject.imageSrc : ''"
+            :title="currentModalImageObject ? currentModalImageObject.title : ''"
+            @close="handleModalClose"
+        />
+    </Transition>
 </template>
 
 <style lang="scss">
@@ -184,6 +184,7 @@ function handleModalClose() {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    padding-bottom: 2rem;
     
     @media (max-width: 768px) {
         flex-direction: column;
@@ -246,17 +247,12 @@ function handleModalClose() {
 }
 
 .section {
-    margin: 0;
-    padding: 1rem 0;
     text-align: center;
-
-    h2 {
-        margin-bottom: 1rem;
-        color: var(--secondary-color);
-    }
+    padding: 1rem 1rem 2.5rem 1rem;
+    margin: 0;
 
     p {
-        max-width: 600px;
+        max-width: 45rem;
         margin: 0 auto 2rem;
     }
 
@@ -274,7 +270,7 @@ function handleModalClose() {
     background-color: var(--primary-color-dark);
 }
 .section--commission {
-    background-color: var(--primary-color-light);
+    background-color: var(--primary-color-darker);
 }
 
 .section-button {
