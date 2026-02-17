@@ -273,6 +273,11 @@ const hideBurgerMenu = (() => {
     margin-left: 1rem;
 }
 
+li {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 .v-enter-active,
 .v-leave-active {
 transition: transform 0.35s ease, opacity 0.35s ease;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Modern+Antiqua&family=Montserrat:ital,wght@0,300;0,500;1,300&family=Poppins:ital,wght@0,400;0,500;1,400&family=Special+Elite&display=swap');
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'IM Fell English', serif;
 }
 
 h1, h2, h3, h4, p {
@@ -17,16 +17,16 @@ h2, h3, h4 {
     margin-top: 1.5rem;
 }
 
+p, li {
+    font-size: 0.9rem;
+}
+
 a {
     color: var(--primary-color-lightest);
+    text-decoration: none;
 }
 
 a:hover {
     color: var(--primary-color-lighter);
     text-decoration: none;
-}
-
-li {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
 }
