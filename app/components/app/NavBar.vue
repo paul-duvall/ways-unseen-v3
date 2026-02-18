@@ -1,4 +1,4 @@
-<script setup>
+        <script setup>
 import { ref } from 'vue'
 
 const showMenu = ref(false)
@@ -14,11 +14,15 @@ const hideBurgerMenu = (() => {
 
 <template>
     <div class="navbar-container">
-        <Transition>
+        <Transition>    
             <div
               v-if="showMenu"
               class="burger-menu"
             >
+                <AppCommissionButton
+                    @click="hideBurgerMenu"
+                    class="burger-menu-btn"
+                />
                 <ul class="burger-menu-items">
                     <li class="burger-menu-item">
                         <NuxtLink
@@ -34,14 +38,6 @@ const hideBurgerMenu = (() => {
                         @click="hideBurgerMenu"
                         >
                         About
-                        </NuxtLink>
-                    </li>
-                    <li class="burger-menu-item">
-                        <NuxtLink
-                        to="/commissions"
-                        @click="hideBurgerMenu"
-                        >
-                        Commissions
                         </NuxtLink>
                     </li>
                     <li class="burger-menu-item">
@@ -88,7 +84,7 @@ const hideBurgerMenu = (() => {
                         to="/about"
                         class="nav-link"
                         >
-                        About
+                            About
                         </NuxtLink>
                     </li>
                     <li>
@@ -96,31 +92,22 @@ const hideBurgerMenu = (() => {
                         to="/contact"
                         class="nav-link"
                         >
-                        Contact
+                            Contact
                         </NuxtLink>
                     </li>
-                    <li>
-                        <NuxtLink
-                        to="/commissions"
-                        class="nav-link"
-                        >
-                            <button class="commissions-btn">
-                                Commission a map
-                            </button>
-                        </NuxtLink>
-                    </li>
+                    <AppCommissionButton style="margin-left: 1.25rem; "/>
                 </ul>
                 <div class="socials-container">
                     <div>
-<a
-                        href="https://bsky.app/profile/ways-unseen.bsky.social"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Open Bluesky profile"
-                        title="Open Bluesky profile"
-                    >
-                        <img src="/images/icon-bluesky.svg" alt="Bluesky" width="28" height="28" />
-                    </a>
+                        <a
+                            href="https://bsky.app/profile/ways-unseen.bsky.social"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open Bluesky profile"
+                            title="Open Bluesky profile"
+                        >
+                            <img src="/images/icon-bluesky.svg" alt="Bluesky" width="28" height="28" />
+                        </a>
                     </div>
                     <div>
                         <a
@@ -155,8 +142,8 @@ const hideBurgerMenu = (() => {
                             <img src="/images/icon-itch.svg" alt="Itch" width="35" height="35" />
                         </a>
                     </div>
+
                 </div>
-                
             </div>
         </nav>   
     </div>
@@ -167,6 +154,7 @@ const hideBurgerMenu = (() => {
     background-color: var(--primary-color);
     li {
         font-size: 1.05rem;
+        margin-left: 1rem;
     }
 }
 .nav {
@@ -260,9 +248,12 @@ const hideBurgerMenu = (() => {
     top: 0;
     z-index: 999;
 }
+.burger-menu-btn {
+    margin-left: 1.5rem;
+    margin-top: 3.5rem;
+}
 .burger-menu-items {
-    margin-left: 0.25rem;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
 }
 .burger-menu-item {
     list-style: none !important;
@@ -276,12 +267,6 @@ const hideBurgerMenu = (() => {
     a:hover {
         color: var(--primary-color-lighter);
     }
-}
-.commissions-btn {
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    margin-left: 1rem;
 }
 
 li {
