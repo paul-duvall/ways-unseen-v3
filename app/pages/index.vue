@@ -61,14 +61,14 @@ function handleModalClose() {
 </script>
 
 <template>
-    <div style="background-color: var(--primary-color-dark);">
+    <div class="page-container">
         <img
             src="/images/banner.jpg"
             alt="Ways Unseen Homepage Banner"
-            style="width: 100vw"
+            class="hero-image"
         >
-        <h1 style="margin-top: 2rem; margin-bottom: 2rem; text-align: center;">
-            Ways Unseen - creator of hand-drawn fantastical maps,<br> dungeons and unexpected places!
+        <h1 class="page-title">
+            Ways Unseen - hand-drawn fantastical maps of dungeons, strange lands and unexpected places!
         </h1>
         <div class="illustration-examples">
             <div class="illustration-example">
@@ -178,6 +178,31 @@ function handleModalClose() {
 </template>
 
 <style lang="scss">
+.page-container {
+    background-color: var(--primary-color-dark);
+}
+
+.page-title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.25rem;
+    max-width: 50rem;
+    margin: 2rem auto 2rem;
+}
+
+@media (max-width: 1024px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.25rem;
+    }
+}
+
 .illustration-examples {
     display: flex;
     align-items: center;

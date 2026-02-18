@@ -65,7 +65,7 @@ const hideBurgerMenu = (() => {
                 <div class="line" />
                 <div class="line" />
             </div>
-            <NuxtLink to="/" class="nav-logo">
+            <NuxtLink to="/">
                 <img
                     src="/images/logo-white.png"
                     alt="Ways Unseen Logo"
@@ -174,10 +174,21 @@ const hideBurgerMenu = (() => {
     display: flex;
     position: relative;
 }
+.nav-logo img {
+    width: 70px;
+    height: auto;
+    max-width: none;
+    display: block;
+}
+@media (max-width: 360px) {
+    .nav-logo img {
+        width: 56px;
+    }
+}
 .nav-menu {
     visibility: hidden;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         visibility: visible;
     }
 }
@@ -190,7 +201,7 @@ const hideBurgerMenu = (() => {
     justify-content: center;
     align-items: center;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         visibility: visible;
     }
 }
@@ -207,7 +218,7 @@ const hideBurgerMenu = (() => {
     position: absolute;
     z-index: 1000;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         display: none;
     }
 }

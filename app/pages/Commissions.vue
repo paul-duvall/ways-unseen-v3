@@ -1,6 +1,9 @@
 <template>
-    <div class="container">
-        <img src="/images/commission-banner.jpg" alt="Commissions header" class="top-image" />
+    <div class="container" style="border: 2px solid red;">
+        <picture>
+            <source media="(max-width: 960px)" srcset="/images/commissions-banner-2-small.jpg" />
+            <img src="/images/commission-banner.jpg" alt="Work in progress images" class="top-image" />
+        </picture>
         <section>
             <h2>Commissions</h2>
             <p>
@@ -14,6 +17,7 @@
             </p>
         </section>
         <section>
+            <img src="/images/commissions-banner-3-small.jpg" alt="Work in progress image" class="small-screen-image" />
             <h2>Process</h2>
             <p>
                 Here's a brief overview of how I typically handle a commission to give you an idea of what to expect if you hire me to draw a map:
@@ -61,5 +65,16 @@ h2 {
 }
 li {
     margin-bottom: 0.75rem;   
+}
+
+.small-screen-image {
+    display: none;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+@media (max-width: 959px) {
+    .process-small-image {
+        display: block;
+    }
 }
 </style>

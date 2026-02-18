@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Modern+Antiqua&family=Montserrat:ital,wght@0,300;0,500;1,300&family=Poppins:ital,wght@0,400;0,500;1,400&family=Special+Elite&display=swap');
 
+html {
+    font-size: 1.2rem;
+}
+
 body {
     font-family: 'IM Fell English', serif;
 }
@@ -17,9 +21,9 @@ h2, h3, h4 {
     margin-top: 1.5rem;
 }
 
-p, li {
-    font-size: 0.9rem;
-}
+/* p, li {
+    font-size: 20px;
+} */
 
 a {
     color: var(--primary-color-lightest);
