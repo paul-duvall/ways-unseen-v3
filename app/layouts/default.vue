@@ -1,9 +1,17 @@
+<script setup>
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+</script>
+
 <template>
     <div class="layout-wrapper">
         <AppNavBar />
         <main class="container">
             <Transition mode="out-in">
-                <slot />
+                <div :key="route.path">
+                    <slot />
+                </div>
             </Transition>
         </main>
         <AppFooter />

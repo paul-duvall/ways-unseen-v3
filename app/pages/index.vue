@@ -1,5 +1,5 @@
 <script setup>
-import { ref, nextTick } from 'vue'
+import { ref, nextTick, onUnmounted } from 'vue'
 
 const showImageModal = ref(false)
 const modalTrigger = ref(null)
@@ -42,7 +42,8 @@ const modalObjects = [
 function openModal(imageType) {
     const found = modalObjects.find(obj => obj.type === imageType)
     if (found) {
-        previousActive = document.activeElement
+        // Safely capture the active element; guard against SSR/nav issues
+        previousActive = typeof document !== 'undefined' ? document.activeElement : null
         currentModalImageObject.value = found
         showImageModal.value = true
     }
@@ -51,13 +52,17 @@ function openModal(imageType) {
 function handleModalClose() {
     showImageModal.value = false
     nextTick(() => {
-        if (modalTrigger.value && typeof modalTrigger.value.focus === 'function') {
-            modalTrigger.value.focus()
-        } else if (previousActive && typeof previousActive.focus === 'function') {
+        if (previousActive && typeof previousActive.focus === 'function') {
             previousActive.focus()
         }
     })
 }
+
+onUnmounted(() => {
+    // Clear stale DOM references when leaving the page to prevent nav issues
+    previousActive = null
+    showImageModal.value = false
+})
 </script>
 
 <template>
@@ -156,15 +161,15 @@ function handleModalClose() {
                 <img src="/images/iso-room-1.png" alt="Isometric room example" />
             </div>
             <p>I love contributing maps to other people's projects and take great pride in the quality of the illustrations I provide. I've drawn maps for roleplaying games, boardgame conventions, virtual tabletop services, adventure gamebooks and more! Give me a shout if you are interested in working together to create a map for your product!</p>
-            <NuxtLink to="/Commissions" class="section-button">Commission Process</NuxtLink>
+            <NuxtLink to="/commissions" class="section-button">Commission Process</NuxtLink>
         </section>
         <section class="section section--about">
-            <h2>About me!</h2>
+            <h2>About Ways Unseen</h2>
             <div class="section-image">
                 <img src="/images/iso-room-2.png" alt="Isometric room example 2" />
             </div>
-            <p>I'm a fantasy map illustrator, living in the east of England in a county called Norfolk. I've always enjoyed drawing, though for much of my life, I have shied away from actually putting pencil to paper. Now that I've started in earnest, I never want to stop! I gain a great deal of pleasure from realise fantastical places in my illustrations...</p>
-            <NuxtLink to="/About" class="section-button">Find out more</NuxtLink>
+            <p>I'm a fantasy map illustrator, living in Norfolk in the east of England. I've always enjoyed drawing, though for much of my life, I have shied away from actually putting pencil to paper. Now that's changed and I never want to stop! I gain a great deal of pleasure from realise fantastical places in my illustrations...</p>
+            <NuxtLink to="/about" class="section-button">Find out more</NuxtLink>
         </section>
     </div>
     <Transition name="image-modal" appear>

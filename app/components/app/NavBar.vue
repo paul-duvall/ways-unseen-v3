@@ -104,9 +104,9 @@ const hideBurgerMenu = (() => {
                         to="/commissions"
                         class="nav-link"
                         >
-                            <Button class="commissions-btn">
+                            <button class="commissions-btn">
                                 Commission a map
-                            </Button>
+                            </button>
                         </NuxtLink>
                     </li>
                 </ul>

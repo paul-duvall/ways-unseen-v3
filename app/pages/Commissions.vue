@@ -1,5 +1,5 @@
 <template>
-    <div class="container" style="border: 2px solid red;">
+    <div class="container">
         <picture>
             <source media="(max-width: 960px)" srcset="/images/commissions-banner-2-small.jpg" />
             <img src="/images/commission-banner.jpg" alt="Work in progress images" class="top-image" />
@@ -54,7 +54,6 @@
 .top-image {
     width: 100%;
     display: block;
-    /* margin: -2rem -2rem 2rem -2rem; */
 }
 section {
     margin: 0 auto 2rem;
