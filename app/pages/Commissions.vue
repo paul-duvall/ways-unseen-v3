@@ -43,6 +43,7 @@
                 </li>
             </ol>
         </section>
+        <section>If that sounds good, feel free to <NuxtLink to="/Contact">get in touch</NuxtLink>!</section>
     </div>
 </template>
 

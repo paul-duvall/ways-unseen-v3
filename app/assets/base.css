@@ -21,16 +21,30 @@ h2, h3, h4 {
     margin-top: 1.5rem;
 }
 
-/* p, li {
-    font-size: 20px;
-} */
 
-a {
+/* Only underline links inside text blocks, not nav */
+p a, li a, section a, .text-content a {
     color: var(--primary-color-lightest);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    text-decoration-color: var(--secondary-color);
+    transition: color 0.2s, text-decoration-color 0.2s;
 }
 
-a:hover {
+p a:hover, li a:hover, section a:hover, .text-content a:hover,
+p a:focus, li a:focus, section a:focus, .text-content a:focus {
     color: var(--primary-color-lighter);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color);
+}
+
+/* Remove underline for nav links */
+.nav-link {
+    text-decoration: none !important;
+    transition: color 0.2s;
+}
+.nav-link:hover, .nav-link:focus {
+    color: var(--primary-color-lighter);
+    text-decoration: none !important;
 }

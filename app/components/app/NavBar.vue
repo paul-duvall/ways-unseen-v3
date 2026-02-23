@@ -74,7 +74,7 @@ const hideBurgerMenu = (() => {
                     <li class="nav-item">
                         <NuxtLink
                         to="/"
-                        class="nav-logo"
+                        class="nav-link"
                         >
                             Home
                         </NuxtLink>
