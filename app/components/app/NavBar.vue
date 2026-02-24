@@ -61,7 +61,7 @@ const hideBurgerMenu = (() => {
                 <div class="line" />
                 <div class="line" />
             </div>
-            <NuxtLink to="/">
+            <NuxtLink to="/" class="nav-logo">
                 <img
                     src="/images/logo-white.png"
                     alt="Ways Unseen Logo"
@@ -239,7 +239,7 @@ const hideBurgerMenu = (() => {
     transition: .3s ease;
 }
 .burger-menu {
-    background-color: var(--primary-color-light);
+    background-color: var(--primary-color);
     height: 100%;
     width: 100%;
     max-width: 400px;

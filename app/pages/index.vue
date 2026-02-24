@@ -161,7 +161,7 @@ onUnmounted(() => {
                 <img src="/images/iso-room-1.png" alt="Isometric room example" />
             </div>
             <p>I love contributing maps to other people's projects and take great pride in the quality of the illustrations I provide. I've drawn maps for roleplaying games, boardgame conventions, virtual tabletop services, adventure gamebooks and more! Give me a shout if you are interested in working together to create a map for your product!</p>
-            <NuxtLink to="/commissions" class="section-button">Commission Process</NuxtLink>
+            <NuxtLink to="/commissions" class="section-button commission-section-button">Commission Process</NuxtLink>
         </section>
         <section class="section section--about">
             <h2>About Ways Unseen</h2>
@@ -169,7 +169,7 @@ onUnmounted(() => {
                 <img src="/images/iso-room-2.png" alt="Isometric room example 2" />
             </div>
             <p>I'm a fantasy map illustrator, living in Norfolk in the east of England. I've always enjoyed drawing, though for much of my life, I have shied away from actually putting pencil to paper. Now that's changed and I never want to stop! I gain a great deal of pleasure from realise fantastical places in my illustrations...</p>
-            <NuxtLink to="/about" class="section-button">Find out more</NuxtLink>
+            <NuxtLink to="/about" class="section-button about-section-button">Find out more</NuxtLink>
         </section>
     </div>
     <Transition name="image-modal" appear>
@@ -308,12 +308,24 @@ onUnmounted(() => {
     background-color: var(--primary-color);
     color: var(--primary-color-lightest);
     padding: 0.75rem 1rem;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: background-color 0.3s ease;
 
-    &:hover {
-        background-color: var(--primary-color-dark);
+    &:hover, &:focus {
         color: var(--primary-color-lighter);
+        text-decoration: none !important;
+    }
+}
+
+.commission-section-button {
+    &:hover, &:focus {
+        background-color: var(--primary-color-dark);
+    }
+}
+
+.about-section-button {
+    &:hover, &:focus {
+        background-color: var(--primary-color-darker);
     }
 }
 </style>
