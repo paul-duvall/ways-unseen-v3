@@ -1,3 +1,29 @@
+<script setup lang="ts">
+const formStatus = ref('')
+
+const handleSubmit = async (event: Event) => {
+  const form = event.target as HTMLFormElement
+  const formData = new FormData(form)
+
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString()
+    })
+
+    if (response.ok) {
+      formStatus.value = 'success'
+      form.reset()
+    } else {
+      formStatus.value = 'error'
+    }
+  } catch (error) {
+    formStatus.value = 'error'
+  }
+}
+</script>
+
 <template>
   <div class="container">
     <main class="contact">
@@ -17,8 +43,10 @@
         </p>
         <form
           name="contact"
-          method="POST"
+          method="post"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          @submit.prevent="handleSubmit"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div class="contact-field">
@@ -35,6 +63,12 @@
           </div>
           <div class="button">
             <button type="submit">Submit</button>
+          </div>
+          <div v-if="formStatus === 'success'" class="form-message success">
+            Thank you! Your message has been sent successfully.
+          </div>
+          <div v-if="formStatus === 'error'" class="form-message error">
+            Sorry, there was an error sending your message. Please try again or email directly.
           </div>
         </form>
       </section>
@@ -87,6 +121,20 @@
   min-width: 120px;
 }
 .contact button:hover {
+.form-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+.form-message.success {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: rgb(34, 197, 94);
+}
+.form-message.error {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: rgb(239, 68, 68);
+}
   background-color: var(--primary-color-darker);
 }
 .button {
