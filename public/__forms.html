@@ -1,19 +1,23 @@
 <html>
   <head></head>
   <body>
-    <form name="contact" data-netlify="true" hidden>
+    <form
+      name="contact"
+      data-netlify="true"
+      hidden
+    >
       <input type="hidden" name="form-name" value="contact" />
       <div>
         <label for="name">Name</label>
-        <input name="name" type="text" required />
+        <input id="name" name="name" type="text" required />
       </div>
       <div>
         <label for="email">Email</label>
-        <input type="email" name="email" required />
+        <input id="email" type="email" name="email" required />
       </div>
       <div>
         <label for="message">Message</label>
-        <input name="message" type="text" required />
+        <textarea id="message" name="message" rows="5" required></textarea>
       </div>
     </form>
   </body>

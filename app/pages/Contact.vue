@@ -6,7 +6,7 @@ const handleSubmit = async (event: Event) => {
   const formData = new FormData(form)
 
   try {
-    const response = await fetch('/', {
+    const response = await fetch('/__forms.html', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData as any).toString()
@@ -17,9 +17,11 @@ const handleSubmit = async (event: Event) => {
       form.reset()
     } else {
       formStatus.value = 'error'
+      console.error('Form submission failed:', response.status, response.statusText)
     }
   } catch (error) {
     formStatus.value = 'error'
+    console.error('Form submission error:', error)
   }
 }
 </script>
@@ -43,9 +45,6 @@ const handleSubmit = async (event: Event) => {
         </p>
         <form
           name="contact"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
           @submit.prevent="handleSubmit"
         >
           <input type="hidden" name="form-name" value="contact" />
