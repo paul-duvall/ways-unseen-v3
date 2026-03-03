@@ -194,6 +194,7 @@ onUnmounted(() => {
     font-size: 2.25rem;
     max-width: 50rem;
     margin: 2rem auto 2rem;
+    padding: 0 0.75rem;
 }
 
 @media (max-width: 1024px) {
@@ -224,6 +225,7 @@ onUnmounted(() => {
 .illustration-example {
     max-width: 20rem;
     text-align: center;
+    padding: 0 0.75rem;
 
     @media (min-width: 769px) and (max-width: 1023px) {
         flex: 0 0 calc(50% - 1rem);

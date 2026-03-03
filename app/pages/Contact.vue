@@ -80,6 +80,11 @@ const handleSubmit = async (event: Event) => {
   background-color: var(--primary-color-dark);
   padding: 2rem;
 }
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+}
 .contact-title {
   text-align: center;
   color: var(--secondary-color);

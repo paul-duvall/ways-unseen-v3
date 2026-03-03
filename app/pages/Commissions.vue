@@ -52,6 +52,11 @@
     background-color: var(--primary-color-dark);
     padding: 2rem;
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+}
 .top-image {
     width: 100%;
     display: block;

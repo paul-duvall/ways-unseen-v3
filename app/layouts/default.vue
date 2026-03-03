@@ -23,11 +23,15 @@ const route = useRoute()
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .container {
   flex: 1; 
   padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .v-enter-active,

@@ -37,6 +37,11 @@
     background-color: var(--primary-color-dark);
     padding: 2rem;
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+}
 h2 {
     text-align: center;
 }

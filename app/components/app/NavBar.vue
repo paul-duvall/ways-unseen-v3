@@ -152,6 +152,8 @@ const hideBurgerMenu = (() => {
 <style scoped>
 .navbar-container {
     background-color: var(--primary-color);
+    max-width: 100vw;
+    overflow-x: hidden;
     li {
         font-size: 1.05rem;
         margin-left: 1rem;
@@ -161,6 +163,7 @@ const hideBurgerMenu = (() => {
     padding: 0.25rem;
     display: flex;
     position: relative;
+    max-width: 100vw;
 }
 .nav-logo img {
     width: 70px;
