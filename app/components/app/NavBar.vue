@@ -42,6 +42,14 @@ const hideBurgerMenu = (() => {
                     </li>
                     <li class="burger-menu-item">
                         <NuxtLink
+                        to="/creations"
+                        @click="hideBurgerMenu"
+                        >
+                        Creations
+                        </NuxtLink>
+                    </li>
+                    <li class="burger-menu-item">
+                        <NuxtLink
                         to="/contact"
                         @click="hideBurgerMenu"
                         >
@@ -85,6 +93,14 @@ const hideBurgerMenu = (() => {
                         class="nav-link"
                         >
                             About
+                        </NuxtLink>
+                    </li>
+                    <li class="nav-item">
+                        <NuxtLink
+                        to="/creations"
+                        class="nav-link"
+                        >
+                            Creations
                         </NuxtLink>
                     </li>
                     <li>
