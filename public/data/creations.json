@@ -6,7 +6,7 @@
     "blurb": "A solo roll-and-write game of fantasy commerce",
     "intro_text": "Village Emporium is a solo roll and write that requires one sheet to printed out to play! It features a hand-drawn map and art by Ways Unseen.",
     "itch_link": "https://ways-unseen.itch.io/village-emporium",
-    "drivethru_link": "https://www.drivethrurpg.com/product/472870/Village-Emporium",
+    "drivethru_link": "https://www.drivethrurpg.com/en/product/463920/village-emporium?affiliate_id=3139510",
     "kind_words": [
       {
         "author": "Pinayu",
@@ -19,13 +19,38 @@
     ]
   },
   {
+    "id": "village-emporium-orc-raiders",
+    "title": "Village Emporium - Orc Raiders",
+    "image_folder": "village-emporium-orc-raiders",
+    "blurb": "A expansion that makes the solo roll-and-write game of fantasy commerce more challenging",
+    "intro_text": "Village Emporium Orc Raiders introduces the threatening orcs to the solo roll and write. It adds Orc Chieftains, each of which has a unique effect on gameplay and a table of Orc Actions that you'll have to roll on every turn.",
+    "itch_link": "https://ways-unseen.itch.io/village-emporium-orc-raiders",
+    "drivethru_link": "https://www.drivethrurpg.com/en/product/510262/village-emporium-orc-raiders?affiliate_id=3139510",
+    "kind_words": []
+  },
+  {
+    "id": "d12-locations",
+    "title": "D12 Locations",
+    "image_folder": "d12-locations",
+    "blurb": "A collection of twelve unusual small locations for use in fantasy tabletop games",
+    "intro_text": "D12 Locations is a collection of twelve unusual small locations for use in fantasy tabletop games. Maps are hand-drawn by Ways Unseen and cover a wide-range of interior and exterior locations. Each map is accompanied by some introductory text and a D6 table to spark ideas of what might occur in that place. Writing is by the fantastic Lexikonical!!",
+    "itch_link": "https://ways-unseen.itch.io/d12-locations",
+    "drivethru_link": null,
+    "kind_words": [
+      {
+        "author": "Cog5Games",
+        "text": "A fantastic collection of unique locations, lots to build off here! Tables are great too!"
+      }
+    ]
+  },
+  {
     "id": "notice-board-kit",
     "title": "Notice Board Kit",
     "image_folder": "notice-board-kit",
     "blurb": "A collection of components to build your own notice boards",
     "intro_text": "This is a collection of components that you can use to create your own notice board to share with your players or for use in your game! ",
     "itch_link": "https://ways-unseen.itch.io/notice-board-kit",
-    "drivethru_link": "null",
+    "drivethru_link": null,
     "kind_words": [
       {
         "author": "Joey V",
