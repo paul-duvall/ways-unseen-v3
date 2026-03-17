@@ -17,6 +17,14 @@ const goToCommissions = () => {
     background-color: var(--secondary-color);
     color: white;
     border: none;
-    line-height: 0.8;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    line-height: 1.2;
+    font-size: 1.05rem;
+    transition: background-color 0.2s;
+}
+
+.commissions-btn:hover {
+    background-color: var(--secondary-color-dark);
 }
 </style>

@@ -3,7 +3,7 @@
 export default defineNuxtConfig({
 	modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/image"],
 	devtools: { enabled: true },
-	css: ['@picocss/pico', '~/assets/variables.css', '~/assets/base.css'],
+	css: ['~/assets/variables.css', '~/assets/base.css'],
 	compatibilityDate: "2025-07-15",
 	app: {
 		head: {
@@ -12,6 +12,7 @@ export default defineNuxtConfig({
 				{ charset: "utf-8" },
 				{ name: "viewport", content: "width=device-width, initial-scale=1" },
 				{ name: "description", content: "Ways Unseen - Art Portfolio" },
+				{ name: "color-scheme", content: "light only" },
 			],
 			link: [
 				{ rel: "icon", type: "image/png", href: "/images/logo-white.png" },

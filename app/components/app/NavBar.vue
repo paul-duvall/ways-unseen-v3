@@ -59,7 +59,7 @@ const hideBurgerMenu = (() => {
                 </ul>
             </div>
         </Transition>
-        <nav class="container nav">
+        <nav class="nav">
             <div
                class="hamburger"
                :class="{ 'active': showMenu }"
@@ -178,7 +178,10 @@ const hideBurgerMenu = (() => {
 .nav {
     padding: 0.25rem;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
+    width: 100%;
     max-width: 100vw;
 }
 .nav-logo img {
@@ -194,6 +197,8 @@ const hideBurgerMenu = (() => {
 }
 .nav-menu {
     visibility: hidden;
+    display: flex;
+    align-items: center;
 
     @media (min-width: 1024px) {
         visibility: visible;
