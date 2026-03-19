@@ -72,6 +72,9 @@ onUnmounted(() => {
             alt="Ways Unseen Homepage Banner"
             class="hero-image"
         >
+        <div class="social-links-mobile">
+            <AppSocialLinks />
+        </div>
         <h1 class="page-title">
             Ways Unseen - hand-drawn fantastical maps of dungeons, strange lands and unexpected places!
         </h1>
@@ -187,13 +190,23 @@ onUnmounted(() => {
     background-color: var(--primary-color-dark);
 }
 
+.social-links-mobile {
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 0 0;
+    visibility: visible;
+
+    @media (min-width: 1024px) {
+        visibility: hidden;
+        display: none;
+    }
+}
+
 .page-title {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
     text-align: center;
     font-size: 2.25rem;
     max-width: 50rem;
-    margin: 2rem auto 2rem;
+    margin: 1rem auto 2rem;
     padding: 0 0.75rem;
 }
 
