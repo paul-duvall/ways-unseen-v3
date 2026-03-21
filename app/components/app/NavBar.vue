@@ -126,6 +126,8 @@ const hideBurgerMenu = (() => {
     background-color: var(--primary-color);
     max-width: 100vw;
     overflow-x: hidden;
+    position: relative;
+    z-index: 10000;
     li {
         font-size: 1.05rem;
         margin-left: 1rem;
