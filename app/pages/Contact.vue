@@ -1,9 +1,13 @@
 <script setup lang="ts">
 const formStatus = ref('')
+const isSubmitting = ref(false)
 
 const handleSubmit = async (event: Event) => {
   const form = event.target as HTMLFormElement
   const formData = new FormData(form)
+  
+  isSubmitting.value = true
+  formStatus.value = ''
 
   try {
     const response = await fetch('/__forms.html', {
@@ -22,6 +26,8 @@ const handleSubmit = async (event: Event) => {
   } catch (error) {
     formStatus.value = 'error'
     console.error('Form submission error:', error)
+  } finally {
+    isSubmitting.value = false
   }
 }
 </script>
@@ -61,7 +67,13 @@ const handleSubmit = async (event: Event) => {
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
           <div class="button">
-            <button type="submit">Submit</button>
+            <button type="submit" :disabled="isSubmitting">
+              <span v-if="!isSubmitting">Submit</span>
+              <span v-else class="loading-content">
+                <span class="spinner"></span>
+                Sending...
+              </span>
+            </button>
           </div>
           <div v-if="formStatus === 'success'" class="form-message success">
             Thank you! Your message has been sent successfully.
@@ -110,6 +122,7 @@ const handleSubmit = async (event: Event) => {
   background-color: var(--primary-color-darker);
   border: none;
   border-radius: 0.2rem;
+  color: var(--primary-color-lightest);
   padding: 0.5rem;
   margin-bottom: 1rem;
   margin-top: 0;
@@ -124,22 +137,49 @@ const handleSubmit = async (event: Event) => {
   width: auto;
   min-width: 120px;
 }
-.contact button:hover {
+.contact button:hover:not(:disabled) {
+  background-color: var(--primary-color-darker);
+}
+.contact button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.loading-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--neutral-700);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .form-message {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color-lighter);
+  border-radius: 0.5rem;
   margin-top: 1rem;
+  max-width: 45rem;
   padding: 1rem;
-  border-radius: 0.2rem;
   text-align: center;
 }
 .form-message.success {
-  background-color: rgba(34, 197, 94, 0.2);
+  background-color: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.4);
   color: rgb(34, 197, 94);
 }
 .form-message.error {
-  background-color: rgba(239, 68, 68, 0.2);
+  background-color: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
   color: rgb(239, 68, 68);
-}
-  background-color: var(--primary-color-darker);
 }
 .button {
   display: flex;
