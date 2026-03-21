@@ -240,7 +240,10 @@ const hideBurgerMenu = (() => {
         text-decoration: none;
     }
     a:hover {
-        color: var(--primary-color-lighter);
+        color: var(--secondary-color);
+    }
+    a.router-link-active, a.router-link-exact-active {
+        color: var(--secondary-color);
     }
 }
 

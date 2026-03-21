@@ -93,6 +93,9 @@ p a:focus, li a:focus, section a:focus, .text-content a:focus {
     transition: color 0.2s;
 }
 .nav-link:hover, .nav-link:focus {
-    color: var(--primary-color-lighter);
+    color: var(--secondary-color);
     text-decoration: none !important;
+}
+.nav-link.router-link-active, .nav-link.router-link-exact-active {
+    color: var(--secondary-color);
 }
