@@ -1,5 +1,15 @@
+<script setup lang="ts">
+interface Props {
+  light?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  light: false
+})
+</script>
+
 <template>
-    <div class="social-links">
+    <div class="social-links" :class="{ 'social-links--light': light }">
         <a
             href="https://bsky.app/profile/ways-unseen.bsky.social"
             target="_blank"
@@ -61,5 +71,13 @@
 
 .social-links img {
     display: block;
+}
+
+.social-links--light img {
+    filter: invert(1);
+}
+
+.social-links--light a:hover img {
+    filter: invert(1) opacity(0.6);
 }
 </style>

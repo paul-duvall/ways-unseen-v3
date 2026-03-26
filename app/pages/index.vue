@@ -73,7 +73,7 @@ onUnmounted(() => {
             class="hero-image"
         >
         <div class="social-links-mobile">
-            <AppSocialLinks />
+            <AppSocialLinks light />
         </div>
         <h1 class="page-title">
             Ways Unseen - hand-drawn fantastical maps of dungeons, strange lands and unexpected places!
