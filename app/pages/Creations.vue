@@ -34,9 +34,7 @@ onMounted(async () => {
         I have a range of tabletop resources (and some solo games) available online that feature my maps and illustrations. Explore below and click through to itch.io or drivethrurpg if you'd like to find out more about any of them or to get yourself a copy!
       </p>
 
-      <div v-if="isLoading" class="status-message">
-        Loading creations...
-      </div>
+      <AppLoadingSpinner v-if="isLoading" />
 
       <div v-else-if="error" class="status-message error">
         {{ error }}
@@ -88,13 +86,10 @@ section {
   max-width: 45rem;
 }
 
-.status-message {
+.status-message.error {
   text-align: center;
   padding: 2rem;
   font-size: 1.1rem;
-}
-
-.status-message.error {
   color: var(--secondary-color);
 }
 

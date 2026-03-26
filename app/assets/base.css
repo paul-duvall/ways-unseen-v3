@@ -87,7 +87,6 @@ p a:focus, li a:focus, section a:focus, .text-content a:focus {
     text-decoration-color: var(--secondary-color);
 }
 
-/* Remove underline for nav links */
 .nav-link {
     text-decoration: none !important;
     transition: color 0.2s;

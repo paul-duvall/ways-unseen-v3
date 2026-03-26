@@ -66,7 +66,7 @@ const handleSubmit = async (event: Event) => {
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
-          <div class="button">
+          <div class="button-container">
             <button type="submit" :disabled="isSubmitting">
               <span v-if="!isSubmitting">Submit</span>
               <span v-else class="loading-content">
@@ -131,7 +131,7 @@ const handleSubmit = async (event: Event) => {
   background-color: var(--primary-color-darkest);
   border: 0;
   border-radius: 0.2rem;
-  color: var(--neutral-700);
+  color: var(--primary-color-lightest);
   cursor: pointer;
   padding: 0.5rem 1.2rem;
   width: auto;
@@ -152,10 +152,10 @@ const handleSubmit = async (event: Event) => {
 .spinner {
   width: 14px;
   height: 14px;
-  border: 2px solid var(--neutral-700);
+  border: 2px solid var(--primary-color-lightest);
   border-top-color: transparent;
   border-radius: 50%;
-  animation: spin 0.6s linear infinite;
+  animation: spin 0.9s linear infinite;
 }
 @keyframes spin {
   to {
@@ -181,7 +181,7 @@ const handleSubmit = async (event: Event) => {
   border-color: rgba(239, 68, 68, 0.4);
   color: rgb(239, 68, 68);
 }
-.button {
+.button-container {
   display: flex;
   justify-content: flex-end;
 }

@@ -46,9 +46,7 @@ onMounted(async () => {
 <template>
   <div class="container">
     <section>
-      <div v-if="isLoading" class="status-message">
-        Loading...
-      </div>
+      <AppLoadingSpinner v-if="isLoading" />
 
       <div v-else-if="notFound" class="not-found">
         <h2>Creation Not Found</h2>
@@ -124,12 +122,6 @@ h2 {
 section {
   margin: 0 auto;
   max-width: 45rem;
-}
-
-.status-message {
-  text-align: center;
-  padding: 2rem;
-  font-size: 1.1rem;
 }
 
 .not-found {
