@@ -7,10 +7,6 @@ interface Creation {
   intro_text: string
   itch_link: string
   drivethru_link: string
-  kind_words?: Array<{
-    author: string
-    text: string
-  }>
 }
 
 const route = useRoute()
@@ -87,14 +83,6 @@ onMounted(async () => {
           <div class="images-container">
             <img :src="`/images/creations/${creation.image_folder}/image-1.jpg`" :alt="`${creation.title} - Image 1`" class="detail-image" />
             <img :src="`/images/creations/${creation.image_folder}/image-2.jpg`" :alt="`${creation.title} - Image 2`" class="detail-image" />
-          </div>
-          
-          <div v-if="creation.kind_words && creation.kind_words.length > 0" class="kind-words-section">
-            <h3 class="kind-words-title">Kind Words</h3>
-            <div v-for="(kindWord, index) in creation.kind_words" :key="index" class="kind-word">
-              <p class="kind-word-text">{{ kindWord.text }}</p>
-              <p class="kind-word-author">— {{ kindWord.author }}</p>
-            </div>
           </div>
         </div>
       </div>
@@ -245,35 +233,5 @@ section {
 .creation-btn:hover,
 .creation-btn:focus {
   filter: brightness(0.85);
-}
-
-.kind-words-section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.kind-words-title {
-  text-align: center;
-  color: var(--primary-color-lightest);
-  margin-bottom: 1.5rem;
-}
-
-.kind-word {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.kind-word-text {
-  font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-  color: var(--text-color);
-}
-
-.kind-word-author {
-  font-size: 0.95rem;
-  color: var(--primary-color-lighter);
-  margin-top: 0.5rem;
 }
 </style>
