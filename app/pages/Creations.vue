@@ -95,9 +95,15 @@ section {
 
 .creations-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
   margin-top: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .creations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 1023px) {
@@ -121,7 +127,8 @@ section {
   flex-direction: column;
   transition: border 0.2s ease;
   overflow: hidden;
-  width: 18rem;
+  width: 100%;
+  max-width: 20rem;
   margin: 0 auto;
   text-decoration: none;
   border: 2px solid transparent;
