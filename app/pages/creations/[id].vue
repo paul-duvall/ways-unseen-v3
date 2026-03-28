@@ -2,7 +2,6 @@
 interface Creation {
   id: string
   title: string
-  image_folder: string
   blurb: string
   intro_text: string
   itch_link: string
@@ -81,8 +80,8 @@ onMounted(async () => {
           </div>
           
           <div class="images-container">
-            <img :src="`/images/creations/${creation.image_folder}/image-1.jpg`" :alt="`${creation.title} - Image 1`" class="detail-image" />
-            <img :src="`/images/creations/${creation.image_folder}/image-2.jpg`" :alt="`${creation.title} - Image 2`" class="detail-image" />
+            <img :src="`/images/creations/${creation.id}/image-1.jpg`" :alt="`${creation.title} - Image 1`" class="detail-image" />
+            <img :src="`/images/creations/${creation.id}/image-2.jpg`" :alt="`${creation.title} - Image 2`" class="detail-image" />
           </div>
         </div>
       </div>

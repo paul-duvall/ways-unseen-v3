@@ -2,7 +2,6 @@
 interface Creation {
   id: string
   title: string
-  image_folder: string
   blurb: string
 }
 
@@ -47,7 +46,7 @@ onMounted(async () => {
           :to="`/creations/${creation.id}`" 
           class="creation-card"
         >
-          <img :src="`/images/creations/${creation.image_folder}/thumbnail.png`" :alt="creation.title" class="creation-image" />
+          <img :src="`/images/creations/${creation.id}/thumbnail.png`" :alt="creation.title" class="creation-image" />
           <div class="card-content">
             <h3 class="creation-title">{{ creation.title }}</h3>
             <p class="creation-blurb">{{ creation.blurb }}</p>
