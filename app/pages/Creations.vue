@@ -3,11 +3,27 @@ interface Creation {
   id: string
   title: string
   blurb: string
+  category: string
 }
 
 const creations = ref<Creation[]>([])
 const isLoading = ref(true)
 const error = ref('')
+
+// Filter state - all checked by default
+const showGames = ref(true)
+const showMaps = ref(true)
+const showResources = ref(true)
+
+// Computed filtered creations based on checkbox states
+const filteredCreations = computed(() => {
+  return creations.value.filter(creation => {
+    if (creation.category === 'games' && !showGames.value) return false
+    if (creation.category === 'maps' && !showMaps.value) return false
+    if (creation.category === 'resources' && !showResources.value) return false
+    return true
+  })
+})
 
 onMounted(async () => {
   try {
@@ -30,7 +46,7 @@ onMounted(async () => {
     <section>
       <h2>Creations</h2>
       <p class="intro">
-        I have a range of tabletop resources (and some solo games) available online that feature my maps and illustrations. Explore below and click through to itch.io or drivethrurpg if you'd like to find out more about any of them or to get yourself a copy!
+        I have created a range of tabletop resources and solo games, available digitally, many featuring my maps and illustrations. Explore below and click through to itch.io or drivethrurpg if you'd like to find out more about any of them or to purchase a copy!
       </p>
 
       <AppLoadingSpinner v-if="isLoading" />
@@ -39,10 +55,30 @@ onMounted(async () => {
         {{ error }}
       </div>
 
-      <div v-else class="creations-grid">
-        <NuxtLink 
-          v-for="creation in creations" 
-          :key="creation.id" 
+      <div v-else>
+        <div class="filter-section">
+          <label class="filter-checkbox">
+            <input type="checkbox" v-model="showGames" />
+            <span>Solo games</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" v-model="showMaps" />
+            <span>Maps etc</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" v-model="showResources" />
+            <span>Other tabletop resources</span>
+          </label>
+        </div>
+
+        <div v-if="filteredCreations.length === 0" class="status-message">
+          Select at least one category to see some creations
+        </div>
+
+        <TransitionGroup v-else name="card-list" tag="div" class="creations-grid">
+          <NuxtLink 
+            v-for="creation in filteredCreations" 
+            :key="creation.id" 
           :to="`/creations/${creation.id}`" 
           class="creation-card"
         >
@@ -52,6 +88,7 @@ onMounted(async () => {
             <p class="creation-blurb">{{ creation.blurb }}</p>
           </div>
         </NuxtLink>
+        </TransitionGroup>
       </div>
     </section>
   </div>
@@ -85,10 +122,53 @@ section {
   max-width: 45rem;
 }
 
-.status-message.error {
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  background-color: var(--primary-color-darker);
+  border-radius: 0.5rem;
+  justify-content: center;
+  max-width: 32rem;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.filter-checkbox input[type="checkbox"] {
+  cursor: pointer;
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--secondary-color);
+}
+
+.filter-checkbox:hover span {
+  color: var(--primary-color-lightest);
+}
+
+@media (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.status-message {
   text-align: center;
   padding: 2rem;
   font-size: 1.1rem;
+}
+
+.status-message.error {
   color: var(--secondary-color);
 }
 
@@ -165,5 +245,22 @@ section {
   line-height: 1.5;
   font-size: 0.9rem;
   color: var(--text-color);
+}
+
+/* Card list transition animations */
+.card-list-enter-active {
+  transition: opacity 0.3s ease-out;
+}
+
+.card-list-leave-active {
+  transition: opacity 0.2s ease-in;
+}
+
+.card-list-enter-from {
+  opacity: 0;
+}
+
+.card-list-leave-to {
+  opacity: 0;
 }
 </style>
