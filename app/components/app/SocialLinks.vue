@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<Props>(), {
             <img src="/images/icon-instagram.svg" alt="Instagram" width="28" height="28" />
         </a>
         <a
-            href="https://cara.app/waysunseen"
+            href="https://cara.app/waysunseen/portfolio"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Cara profile"

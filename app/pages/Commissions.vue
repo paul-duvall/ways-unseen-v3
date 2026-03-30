@@ -10,7 +10,7 @@
                 If you've found your way to this page, you're probably considering hiring me to draw you a map. Thanks!
             </p>
             <p>
-                The illustrations I create for my clients are typically either isometric or top-down maps, though I have created maps in other styles. If you're curious about the range of styles I can use, check out my <a href="https://cara.app/waysunseen" target="_blank">Cara Portfolio</a> - there are examples of all the styles I use, including a number of previous commissions!
+                The illustrations I create for my clients are typically either isometric or top-down maps, though I have created maps in other styles. If you're curious about the range of styles I can use, check out my <a href="https://cara.app/waysunseen/portfolio" target="_blank">Cara Portfolio</a> - there are examples of all the styles I use, including a number of previous commissions!
             </p>
             <p>
                 If you would like to get in contact you can email me at <a href="mailto:ways.unseen@gmail.com">ways.unseen@gmail.com</a> or you can message me on <a href="https://bsky.app/profile/ways.unseen.bsky.social" target="_blank">Bluesky</a> or <a href="https://www.instagram.com/ways.unseen/" target="_blank">Instagram</a>.
