@@ -7,13 +7,13 @@
         <section>
             <h2>Commissions</h2>
             <p>
-                If you've found your way to this page, you're probably considering hiring me to draw you a map. Thanks!
+                If you've found your way to this page, you're probably considering commissioning me to draw your map. Thank you!
             </p>
             <p>
-                The illustrations I create for my clients are typically either isometric or top-down maps, though I have created maps in other styles. If you're curious about the range of styles I can use, check out my <a href="https://cara.app/waysunseen/portfolio" target="_blank">Cara Portfolio</a> - there are examples of all the styles I use, including a number of previous commissions!
+                The illustrations I create for my clients are typically either isometric or top-down maps, though I have created maps in other styles. If you're curious about the range of styles I employ, check out my <a href="https://cara.app/waysunseen/portfolio" target="_blank">Cara Portfolio</a> - there are examples of all the kinds of maps I draw, including a number of previous commissions!
             </p>
             <p>
-                If you would like to get in contact you can email me at <a href="mailto:ways.unseen@gmail.com">ways.unseen@gmail.com</a> or you can message me on <a href="https://bsky.app/profile/ways.unseen.bsky.social" target="_blank">Bluesky</a> or <a href="https://www.instagram.com/ways.unseen/" target="_blank">Instagram</a>.
+                If you would like to discuss further you can complete the <NuxtLink to="/Contact">contact form</NuxtLink>, email me at <a href="mailto:ways.unseen@gmail.com">ways.unseen@gmail.com</a> or drop me a message (<a href="https://bsky.app/profile/ways.unseen.bsky.social" target="_blank">Bluesky</a> or <a href="https://www.instagram.com/ways.unseen/" target="_blank">Instagram</a>).
             </p>
         </section>
         <section>
@@ -43,7 +43,7 @@
                 </li>
             </ol>
         </section>
-        <section>If that sounds good, feel free to <NuxtLink to="/Contact">get in touch</NuxtLink>!</section>
+        <section>If you have any questions, feel free to <NuxtLink to="/Contact">get in touch</NuxtLink>!</section>
     </div>
 </template>
 
