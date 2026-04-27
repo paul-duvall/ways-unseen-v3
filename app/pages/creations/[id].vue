@@ -68,7 +68,7 @@ onMounted(async () => {
                 itch.io
               </a>
               <a 
-                v-if="creation.drivethru_link !== 'null'" 
+                v-if="creation.drivethru_link !== null" 
                 :href="creation.drivethru_link" 
                 target="_blank" 
                 rel="noopener noreferrer" 
