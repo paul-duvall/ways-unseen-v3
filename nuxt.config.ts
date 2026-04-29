@@ -3,7 +3,7 @@
 export default defineNuxtConfig({
 	modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/image"],
 	devtools: { enabled: true },
-	css: ['~/assets/variables.css', '~/assets/base.css'],
+	css: ["~/assets/variables.css", "~/assets/base.css"],
 	compatibilityDate: "2025-07-15",
 	app: {
 		head: {

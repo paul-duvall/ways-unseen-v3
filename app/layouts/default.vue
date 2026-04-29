@@ -14,6 +14,7 @@ const route = useRoute()
                 </div>
             </Transition>
         </main>
+        <AppCookieConsent />
         <AppFooter />
     </div>
 </template>
