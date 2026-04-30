@@ -3,7 +3,8 @@
     "id": "village-emporium",
     "title": "Village Emporium",
     "blurb": "A solo roll-and-write game of fantasy commerce",
-    "intro_text": "Village Emporium is a solo roll and write that requires one sheet to printed out to play! It features a hand-drawn map and art by Ways Unseen.",
+    "intro_text": "Village Emporium is a solo roll and write that requires one sheet to printed out to play! It features a hand-drawn map and art by Ways Unseen. As an eager entrepreneur, you've high hopes for your new venture - a general store, where you hope to cater to the local townspeople as well as adventurers passing through.",
+    "second_para": "In Village Emporium, you are aiming to develop your establishment over 24 days so that it can compete with more established local stores. Your success will be measured in Commerce Points (CP), which can be earnt by accruing coin, upgrading your store and serving a wide range of customers.",
     "itch_link": "https://ways-unseen.itch.io/village-emporium",
     "drivethru_link": "https://www.drivethrurpg.com/en/product/463920/village-emporium?affiliate_id=3139510",
     "category": "games"
@@ -13,6 +14,7 @@
     "title": "Village Emporium - Orc Raiders",
     "blurb": "A expansion that makes the solo roll-and-write game of fantasy commerce more challenging",
     "intro_text": "Village Emporium Orc Raiders introduces the threatening orcs to the solo roll and write. It adds Orc Chieftains, each of which has a unique effect on gameplay and a table of Orc Actions that you'll have to roll on every turn.",
+    "second_para": "It’s a bad time to be opening a Village Emporium! The orc raiders – previously only a distant threat heard of in whispered rumours – have set up camp close to the village. The increased orc activity will certainly make it trickier to establish your new enterprise, but you’re up to the challenge and determined to make a success of your new Emporium!",
     "itch_link": "https://ways-unseen.itch.io/village-emporium-orc-raiders",
     "drivethru_link": "https://www.drivethrurpg.com/en/product/510262/village-emporium-orc-raiders?affiliate_id=3139510",
     "category": "games"
@@ -22,6 +24,7 @@
     "title": "D12 Locations",
     "blurb": "A collection of twelve unusual small locations for use in fantasy tabletop games",
     "intro_text": "D12 Locations is a collection of twelve unusual small locations for use in fantasy tabletop games. Maps are hand-drawn by Ways Unseen and cover a wide-range of interior and exterior locations. Each map is accompanied by some introductory text and a D6 table to spark ideas of what might occur in that place. Writing is by the fantastic Lexikonical!!",
+    "second_para": "One of these locations could form the setting of a key scene in a game session, or perhaps just a stop along the way to where the main action is taking place. You might select a place at random by rolling a 12-sided dice, or chosen one based on the needs of your story or campaign.",
     "itch_link": "https://ways-unseen.itch.io/d12-locations",
     "drivethru_link": null,
     "category": "maps"
@@ -30,7 +33,8 @@
     "id": "notice-board-kit",
     "title": "Notice Board Kit",
     "blurb": "A collection of components to build your own notice boards",
-    "intro_text": "This is a collection of components that you can use to create your own notice board to share with your players or for use in your game! ",
+    "intro_text": "The Notice Board Kit is a collection of components that you can use to create your own notice board to share with your players or for use in your game!",
+    "second_para": "All the different assets are provided as separate image files that have transparent backgrounds, allowing you to construct your own notice board with whichever assets you want to include. Also included are two pre-made boards - one with blank notices, and one with notices that include titles.",
     "itch_link": "https://ways-unseen.itch.io/notice-board-kit",
     "drivethru_link": null,
     "category": "resources"
@@ -40,6 +44,7 @@
     "title": "Four Adventure Bookmarks",
     "blurb": "Four bookmarks, four adventures!",
     "intro_text": "Ever wanted to keep a place in a book you were reading whilst also having a great adventure location to hand for your rpg of choice? Well now you can!",
+    "second_para": "The four Bookmark Adventures each include map, hand-drawn by Ways Unseen, along with flavour text, three reasons a party of adventurers might visit that location and keyed locations in that adventure site. Explore the shrine of the mysterious Black Ravens, or delve into the dark shadows on the edges of the Encroaching Forest. Perhaps you hear the call to adventure from the undercity beyond the portal or seek to discover the mysteries of the damned isles.",
     "itch_link": "https://ways-unseen.itch.io/bookmark-maps",
     "drivethru_link": null,
     "category": "maps"
@@ -49,6 +54,7 @@
     "title": "Ways Unseen Tiles - Forest Set",
     "blurb": "A set of 26 hand-drawn forest tiles including entrances and final boss areas",
     "intro_text": "Twenty-six unique, lovingly-crafted, hand-drawn forest tiles that can be combined to provide endless configurations for your forest exploration! Ideal for solo-gamers and DMs alike, the Ways Unseen Forest Tiles typify Ways Unseen's characteristic top-down map style. The pack includes 18 standard tiles, 4 entrance tiles and 4 final area tiles.",
+    "second_para": "The tiles can be put together in endless different combinations, allowing you to pre-build a forest for your game or to draw cards as you go, revealing the location as your characters delve ever deeper. The main tiles all feature two entrances on each side, meaning they can easily be positioned alongside each other to form onward routes for adventurers.",
     "itch_link": "https://ways-unseen.itch.io/forest-tiles",
     "drivethru_link": null,
     "category": "maps"
@@ -58,6 +64,7 @@
     "title": "Ways Unseen Tiles - Dungeon Set",
     "blurb": "A set of 26 hand-drawn dungeon tiles including entrances and final boss rooms.",
     "intro_text": "Twenty-six unique, lovingly-crafted hand-drawn dungeon tiles can be combined to provide endless configurations for your dungeon exploration! Ideal for solo-gamers and DMs alike, the Ways Unseen Dungeon Tiles typify Ways Unseen's characteristic top-down dungeon style. The pack includes 18 standard tiles, 4 entrance tiles and 4 final area tiles.",
+    "second_para": "The tiles can be put together in endless different combinations, allowing you to pre-build a dungeon for your game or to draw cards as you go, revealing the location as your character delves ever deeper. The main tiles all feature two entrances on each side, meaning they can easily be positioned alongside each other to form onward routes for adventurers.",
     "itch_link": "https://ways-unseen.itch.io/dungeon-tiles",
     "drivethru_link": null,
     "category": "maps"
@@ -67,6 +74,7 @@
     "title": "Ways Unseen Map Pack",
     "blurb": "Eight location maps for tabletop gaming",
     "intro_text": "The first map pack from cartographer Ways Unseen contains eight lovingly hand-drawn top-down and isometric maps portraying a range of locations including dungeons, a forest fort and cave systems. Included are four larger maps (with two version of each - keyed and non-keyed) and four smaller maps, each with keys and non-keyed versions.",
+    "second_para": "I hope you enjoy using these maps as much as I enjoy creating them! I take my time drawing my maps and each one represents hours of careful crafting. I take pleasure in creating spaces that are hopefully a little bit different compared to other tabletop gaming locations.",
     "itch_link": "https://ways-unseen.itch.io/map-pack",
     "drivethru_link": null,
     "category": "maps"
@@ -76,6 +84,7 @@
     "title": "Subterranean Map Pack",
     "blurb": "The Subterranean Map Pack is a collection of fourteen hand-drawn cavern locations drawn in a top-down style.",
     "intro_text": "Intended for use by Games Masters, solo-players and world-builders; there’s a cavern for every occasion! The Map Pack contains 14 small caverns, each unique and carefully considered to ensure that the pack includes a varied and interesting set locations.",
+    "second_para": "These maps come in all shapes and sizes and, in an effort to include a variety of maps that will be useful for different contexts and purposes.  Maps include a varied number of interlocking caverns, some large, some small but all different. Careful consideration take to include spaces that will encourage exploration, often with multiple routes to encourage decision making and to allow for characters, NPCs and enemies to utilise the space in different ways.",
     "itch_link": "https://ways-unseen.itch.io/subterranean-map-pack",
     "drivethru_link": null,
     "category": "maps"
@@ -85,6 +94,7 @@
     "title": "New York Zombies",
     "blurb": "New York Zombies is a one-page, A4 tri-fold brochure solo game that plays in 25-30 minutes (or less if you're character doesn't make it out of Harlem!).",
     "intro_text": "Bad news! You’re in Manhattan and it’s overrun with zombies! You’ve been laying low, but now it’s time to leave your sanctuary and make a break for the safety of the New Jersey Refugee Camp! It’s been weeks since the outbreak occurred and the city streets aren’t getting any safer. The number of zombies is increasing, and the army are moving in! Try to get out alive; good luck - you’re going to need it!",
+    "second_para": "New York Zombies is a one-page, A4 tri-fold brochure solo game that plays in 25-30 minutes (or less if you're character doesn't make it out of Harlem!). The game includes rules for combat, skill tests and loot, clearly explained and accessible to those who have never played a solo game! You'll find six unique character types each with a different special ability, four locations your character must travel through, each with combat encounters and events, as well as three final bosses that must be overcome!",
     "itch_link": "https://ways-unseen.itch.io/new-york-zombies",
     "drivethru_link": "https://www.drivethrurpg.com/en/product/494953/new-york-zombies-a-solo-mini-rpg?affiliate_id=3139510",
     "category": "games"

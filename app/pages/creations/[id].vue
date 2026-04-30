@@ -4,6 +4,7 @@ interface Creation {
   title: string
   blurb: string
   intro_text: string
+  second_para?: string
   itch_link: string
   drivethru_link: string
 }
@@ -78,6 +79,8 @@ onMounted(async () => {
               </a>
             </div>
           </div>
+
+          <p v-if="creation.second_para" class="second-para">{{ creation.second_para }}</p>
           
           <div class="images-container">
             <img :src="`/images/creations/${creation.id}/image-1.jpg`" :alt="`${creation.title} - Image 1`" class="detail-image" />
@@ -220,6 +223,12 @@ section {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+}
+
+.second-para {
+  margin: 0 auto 1.5rem;
+  max-width: 42rem;
+  line-height: 1.6;
 }
 
 .button-label {
