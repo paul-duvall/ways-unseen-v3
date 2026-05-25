@@ -50,6 +50,14 @@ const hideBurgerMenu = (() => {
                     </li>
                     <li class="burger-menu-item">
                         <NuxtLink
+                        to="/past-commissions"
+                        @click="hideBurgerMenu"
+                        >
+                        Past Commissions
+                        </NuxtLink>
+                    </li>
+                    <li class="burger-menu-item">
+                        <NuxtLink
                         to="/contact"
                         @click="hideBurgerMenu"
                         >
@@ -101,6 +109,14 @@ const hideBurgerMenu = (() => {
                         class="nav-link"
                         >
                             Creations
+                        </NuxtLink>
+                    </li>
+                    <li class="nav-item">
+                        <NuxtLink
+                        to="/past-commissions"
+                        class="nav-link"
+                        >
+                            Past Commissions
                         </NuxtLink>
                     </li>
                     <li>

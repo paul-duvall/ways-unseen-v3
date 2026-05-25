@@ -1,0 +1,58 @@
+[
+  {
+    "id": "tropic-terror",
+    "title": "Tropic Terror",
+    "blurb": "For this choose-you-own-adventure book, I drew a top-down map of a holiday resort on a tropical island.",
+    "link": "https://mattbeighton.co.uk/tropic-terror-pick-your-path-adventure-5/",
+    "cara_link": "https://cara.app/post/9531fc37-0824-4fe9-8a3a-66839db9c28f"
+  },
+  {
+    "id": "dungeon-map-maker",
+    "title": "Dungeon Map Maker",
+    "blurb": "Dungeon Map Maker is a map-drawing roll and write game. I was commissioned to draw a couple of maps for the accompanying 'map pack', intended to inspire would-be cartographers as they play the game!",
+    "link": "https://harry-metcalf.itch.io/dungeon-map-maker-map-pack",
+    "cara_link": "https://cara.app/post/e0a50b11-a962-4fd1-ba0d-84fa5aeba774"
+  },
+  {
+    "id": "adventure-islands-rooms",
+    "title": "Adventure Islands Rooms",
+    "blurb": "Adventure Islands is a German-language swashbuckling RPG. I draw a series of isometric ship rooms for",
+    "link": "https://www.adventure-islands.de/erweiterungsband-artenkodex/",
+    "cara_link": "https://cara.app/post/7b4f75af-3421-48e6-bd56-30230a7fa038"
+  },
+  {
+    "id": "adventure-islands-tavern",
+    "title": "Adventure Islands Tavern",
+    "blurb": "Adventure Islands is a German-language swashbuckling RPG. I draw three isometric locations including this tropical island pirates tavern.",
+    "link": "https://www.adventure-islands.de/adventure-islands-handoutsammlung/"
+  },
+  {
+    "id": "talamander-eye",
+    "title": "Talamander - The Eye",
+    "blurb": "Talamander is a old-school fantasy gamebook magazine series. For issue 7, I drew a top-down map of a space-station called The Eye",
+    "link": "https://www.kickstarter.com/projects/talamander/talamander-fantasy-gamebook-7-hunters-from-a-whispered-void"
+  },
+  {
+    "id": "ngc-castle",
+    "title": "Norwich Game Con",
+    "blurb": "I was commissioned by the organisations of Norwich Game Convention to draw an illustration for their second con featuring an imagined dungeon below Norwich Castle."
+  },
+  {
+    "id": "sandworm",
+    "title": "Sandworm Solo Game",
+    "blurb": "Game designer Psycho Headcheese commissioned me to draw an overland hex map for their solo game Sandworm! Inspired by the film Tremors, the sandworm map features an American desert location, complete with gas station, meteor craters and the constant threat of being dragged down by a gigantic, man-eating worm!",
+    "link": "https://martin-ouellet-headcheese.itch.io/sandworm"
+  },
+  {
+    "id": "system-crashers-town",
+    "title": "System Crashers Town Map",
+    "blurb": "This isometric town map drawns for the RPG System Crashers features a lot more beneath the surface than you initially might think.... ",
+    "link": "https://mottokrosh.com/posts/2023/05/system-crashers-come-to-eld-swinton/"
+  },
+  {
+    "id": "science-gone-bad",
+    "title": "Crime Fighting Luchadores - Science Gone Bad",
+    "blurb": "A commission for the first supplement for RPG Crime Fighting Luchadores, a top-down map of a high-school complete with Vietnam War-era helicopter and portal to another dimension!",
+    "link": "https://martin-ouellet-headcheese.itch.io/lucha-libre-extravaganza"
+  }
+]
