@@ -1,12 +1,13 @@
 <script setup lang="ts">
 interface Creation {
-  id: string
-  title: string
-  blurb: string
-  intro_text: string
-  second_para?: string
-  itch_link: string
-  drivethru_link: string
+	id: string
+	title: string
+	blurb: string
+	intro_text: string
+	second_para?: string
+	has_physical: boolean
+	itch_link: string
+	drivethru_link: string
 }
 
 const route = useRoute()
@@ -17,79 +18,122 @@ const isLoading = ref(true)
 const notFound = ref(false)
 
 onMounted(async () => {
-  try {
-    const response = await fetch('/data/creations.json')
-    if (!response.ok) {
-      throw new Error('Failed to load creations')
-    }
-    const creations: Creation[] = await response.json()
-    const found = creations.find(c => c.id === creationId)
-    
-    if (found) {
-      creation.value = found
-    } else {
-      notFound.value = true
-    }
-  } catch (err) {
-    console.error('Error loading creation:', err)
-    notFound.value = true
-  } finally {
-    isLoading.value = false
-  }
+	try {
+		const response = await fetch("/data/creations.json")
+		if (!response.ok) {
+			throw new Error("Failed to load creations")
+		}
+		const creations: Creation[] = await response.json()
+		const found = creations.find(c => c.id === creationId)
+
+		if (found) {
+			creation.value = found
+		}
+		else {
+			notFound.value = true
+		}
+	}
+	catch (err) {
+		console.error("Error loading creation:", err)
+		notFound.value = true
+	}
+	finally {
+		isLoading.value = false
+	}
 })
 </script>
 
 <template>
-  <div class="container">
-    <section>
-      <AppLoadingSpinner v-if="isLoading" />
+	<div class="container">
+		<section>
+			<AppLoadingSpinner v-if="isLoading" />
 
-      <div v-else-if="notFound" class="not-found">
-        <h2>Creation Not Found</h2>
-        <p>Sorry, we couldn't find the creation you're looking for.</p>
-        <NuxtLink to="/creations" class="back-link">
-          ← Back to Creations
-        </NuxtLink>
-      </div>
+			<div
+				v-else-if="notFound"
+				class="not-found"
+			>
+				<h2>Creation Not Found</h2>
+				<p>Sorry, we couldn't find the creation you're looking for.</p>
+				<NuxtLink
+					to="/creations"
+					class="back-link"
+				>
+					← Back to Creations
+				</NuxtLink>
+			</div>
 
-      <div v-else-if="creation" class="creation-detail">
-        <div class="detail-content">
-          <div class="title-header">
-            <h2>{{ creation.title }}</h2>
-            <NuxtLink to="/creations" class="back-button">
-              ← Back to Creations
-            </NuxtLink>
-          </div>
-          
-          <div class="intro-card">
-            <p class="intro-text">{{ creation.intro_text }}</p>
-            <p class="button-label">Grab a digital copy of this creation...</p>
-            <div class="button-container">
-              <a :href="creation.itch_link" target="_blank" rel="noopener noreferrer" class="creation-btn">
-                itch.io
-              </a>
-              <a 
-                v-if="creation.drivethru_link !== null" 
-                :href="creation.drivethru_link" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="creation-btn"
-              >
-                drivethrurpg
-              </a>
-            </div>
-          </div>
+			<div
+				v-else-if="creation"
+				class="creation-detail"
+			>
+				<div class="detail-content">
+					<div class="title-header">
+						<h2>{{ creation.title }}</h2>
+						<NuxtLink
+							to="/creations"
+							class="back-button"
+						>
+							← Back to Creations
+						</NuxtLink>
+					</div>
 
-          <p v-if="creation.second_para" class="second-para">{{ creation.second_para }}</p>
-          
-          <div class="images-container">
-            <img :src="`/images/creations/${creation.id}/image-1.jpg`" :alt="`${creation.title} - Image 1`" class="detail-image" />
-            <img :src="`/images/creations/${creation.id}/image-2.jpg`" :alt="`${creation.title} - Image 2`" class="detail-image" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+					<div class="intro-card">
+						<p class="intro-text">
+							{{ creation.intro_text }}
+						</p>
+						<p class="button-label">
+							Grab a digital copy of this creation...
+						</p>
+						<div class="button-container">
+							<a
+								:href="creation.itch_link"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="creation-btn"
+							>
+								itch.io
+							</a>
+							<a
+								v-if="creation.drivethru_link !== null"
+								:href="creation.drivethru_link"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="creation-btn"
+							>
+								drivethrurpg
+							</a>
+						</div>
+					</div>
+
+					<p
+						v-if="creation.has_physical"
+						style="border: 2px dashed white; padding: 10px; max-width: 30rem; margin: 0 auto 1rem; text-align: center;"
+					>
+						<strong>Physical copies available for delivery within the UK (email ways.unseen@gmail.com for more info)!</strong>
+					</p>
+					<p
+						v-if="creation.second_para"
+						class="second-para"
+					>
+						{{ creation.second_para }}
+					</p>
+
+					<div class="images-container">
+						<img
+							:src="`/images/creations/${creation.id}/image-1.jpg`"
+							:alt="`${creation.title} - Image 1`"
+							class="detail-image"
+						>
+						<img
+							:src="`/images/creations/${creation.id}/image-2.jpg`"
+							:alt="`${creation.title} - Image 2`"
+							class="detail-image"
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 </template>
 
 <style scoped>

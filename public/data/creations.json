@@ -7,7 +7,8 @@
     "second_para": "In Village Emporium, you are aiming to develop your establishment over 24 days so that it can compete with more established local stores. Your success will be measured in Commerce Points (CP), which can be earnt by accruing coin, upgrading your store and serving a wide range of customers.",
     "itch_link": "https://ways-unseen.itch.io/village-emporium",
     "drivethru_link": "https://www.drivethrurpg.com/en/product/463920/village-emporium?affiliate_id=3139510",
-    "category": "games"
+    "category": "games",
+    "has_physical": false
   },
   {
     "id": "village-emporium-orc-raiders",
@@ -17,17 +18,30 @@
     "second_para": "It’s a bad time to be opening a Village Emporium! The orc raiders – previously only a distant threat heard of in whispered rumours – have set up camp close to the village. The increased orc activity will certainly make it trickier to establish your new enterprise, but you’re up to the challenge and determined to make a success of your new Emporium!",
     "itch_link": "https://ways-unseen.itch.io/village-emporium-orc-raiders",
     "drivethru_link": "https://www.drivethrurpg.com/en/product/510262/village-emporium-orc-raiders?affiliate_id=3139510",
-    "category": "games"
+    "category": "games",
+    "has_physical": false
   },
   {
     "id": "d12-locations",
     "title": "D12 Locations",
     "blurb": "A collection of twelve unusual small locations for use in fantasy tabletop games",
     "intro_text": "D12 Locations is a collection of twelve unusual small locations for use in fantasy tabletop games. Maps are hand-drawn by Ways Unseen and cover a wide-range of interior and exterior locations. Each map is accompanied by some introductory text and a D6 table to spark ideas of what might occur in that place. Writing is by the fantastic Lexikonical!!",
-    "second_para": "One of these locations could form the setting of a key scene in a game session, or perhaps just a stop along the way to where the main action is taking place. You might select a place at random by rolling a 12-sided dice, or chosen one based on the needs of your story or campaign.",
+    "second_para": "Discover what lies beyond Galfrade's Crossing, explore the temple at Rumbledown Castle, brave the Walkways of Fortitude or discover the secrets of the Theatre of Souls! One of these locations could form the setting of a key scene in a game session, or perhaps just a stop along the way to where the main action is taking place. You might select a place at random by rolling a 12-sided dice, or chosen one based on the needs of your story or campaign.",
     "itch_link": "https://ways-unseen.itch.io/d12-locations",
     "drivethru_link": null,
-    "category": "maps"
+    "category": "maps",
+    "has_physical": true
+  },
+    {
+    "id": "d12-locations-2",
+    "title": "D12 Locations II",
+    "blurb": "A collection of twelve unusual small locations for use in fantasy tabletop games",
+    "intro_text": "D12 Locations II is a collection of twelve unusual small locations for use in fantasy tabletop games. Maps are hand-drawn by Ways Unseen and cover a wide-range of interior and exterior locations. Each map is accompanied by some introductory text and a D6 table to spark ideas of what might occur in that place. Writing is by the fantastic Lexikonical!!",
+    "second_para": "Delve into Wilkovia's Chamber, consider the mysteries of the Abyss, tackle the unpredictable twists and turns of the Mischievous Maze or enjoy a relaxing evening in Harix' Hideaway! One of these locations could form the setting of a key scene in a game session, or perhaps just a stop along the way to where the main action is taking place. You might select a place at random by rolling a 12-sided dice, or chosen one based on the needs of your story or campaign.",
+    "itch_link": "https://ways-unseen.itch.io/d12-locations",
+    "drivethru_link": null,
+    "category": "maps",
+    "has_physical": true
   },
   {
     "id": "notice-board-kit",
@@ -47,7 +61,8 @@
     "second_para": "The four Bookmark Adventures each include map, hand-drawn by Ways Unseen, along with flavour text, three reasons a party of adventurers might visit that location and keyed locations in that adventure site. Explore the shrine of the mysterious Black Ravens, or delve into the dark shadows on the edges of the Encroaching Forest. Perhaps you hear the call to adventure from the undercity beyond the portal or seek to discover the mysteries of the damned isles.",
     "itch_link": "https://ways-unseen.itch.io/bookmark-maps",
     "drivethru_link": null,
-    "category": "maps"
+    "category": "maps",
+    "has_physical": true
   },
   {
     "id": "forest-tiles",
@@ -57,7 +72,8 @@
     "second_para": "The tiles can be put together in endless different combinations, allowing you to pre-build a forest for your game or to draw cards as you go, revealing the location as your characters delve ever deeper. The main tiles all feature two entrances on each side, meaning they can easily be positioned alongside each other to form onward routes for adventurers.",
     "itch_link": "https://ways-unseen.itch.io/forest-tiles",
     "drivethru_link": null,
-    "category": "maps"
+    "category": "maps",
+    "has_physical": true
   },
 {
     "id": "dungeon-tiles",
@@ -67,7 +83,8 @@
     "second_para": "The tiles can be put together in endless different combinations, allowing you to pre-build a dungeon for your game or to draw cards as you go, revealing the location as your character delves ever deeper. The main tiles all feature two entrances on each side, meaning they can easily be positioned alongside each other to form onward routes for adventurers.",
     "itch_link": "https://ways-unseen.itch.io/dungeon-tiles",
     "drivethru_link": null,
-    "category": "maps"
+    "category": "maps",
+    "has_physical": true
   },
   {
     "id": "map-pack-1",
@@ -97,6 +114,7 @@
     "second_para": "New York Zombies is a one-page, A4 tri-fold brochure solo game that plays in 25-30 minutes (or less if you're character doesn't make it out of Harlem!). The game includes rules for combat, skill tests and loot, clearly explained and accessible to those who have never played a solo game! You'll find six unique character types each with a different special ability, four locations your character must travel through, each with combat encounters and events, as well as three final bosses that must be overcome!",
     "itch_link": "https://ways-unseen.itch.io/new-york-zombies",
     "drivethru_link": "https://www.drivethrurpg.com/en/product/494953/new-york-zombies-a-solo-mini-rpg?affiliate_id=3139510",
-    "category": "games"
+    "category": "games",
+    "has_physical": true
   }
 ]
