@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { nextTick, onMounted, onUnmounted, ref } from "vue"
+
 interface Creation {
 	id: string
 	title: string
@@ -8,6 +10,7 @@ interface Creation {
 	has_physical: boolean
 	itch_link: string
 	drivethru_link: string
+	rpg_trader_link?: string
 }
 
 const route = useRoute()
@@ -16,6 +19,26 @@ const creationId = route.params.id as string
 const creation = ref<Creation | null>(null)
 const isLoading = ref(true)
 const notFound = ref(false)
+const showImageModal = ref(false)
+const currentModalImageSrc = ref("")
+const currentModalImageTitle = ref("")
+let previousActiveElement: HTMLElement | null = null
+
+function openImageModal(imageSrc: string, title: string) {
+	previousActiveElement = typeof document !== "undefined" ? document.activeElement as HTMLElement | null : null
+	currentModalImageSrc.value = imageSrc
+	currentModalImageTitle.value = title
+	showImageModal.value = true
+}
+
+function closeImageModal() {
+	showImageModal.value = false
+	nextTick(() => {
+		if (previousActiveElement && typeof previousActiveElement.focus === "function") {
+			previousActiveElement.focus()
+		}
+	})
+}
 
 onMounted(async () => {
 	try {
@@ -40,6 +63,11 @@ onMounted(async () => {
 	finally {
 		isLoading.value = false
 	}
+})
+
+onUnmounted(() => {
+	previousActiveElement = null
+	showImageModal.value = false
 })
 </script>
 
@@ -77,6 +105,33 @@ onMounted(async () => {
 						</NuxtLink>
 					</div>
 
+					<div class="images-container">
+						<button
+							type="button"
+							class="image-trigger"
+							:aria-label="`Open ${creation.title} image 1`"
+							@click="openImageModal(`/images/creations/${creation.id}/image-1.jpg`, `${creation.title} - Image 1`)"
+						>
+							<img
+								:src="`/images/creations/${creation.id}/image-1.jpg`"
+								:alt="`${creation.title} - Image 1`"
+								class="detail-image"
+							>
+						</button>
+						<button
+							type="button"
+							class="image-trigger"
+							:aria-label="`Open ${creation.title} image 2`"
+							@click="openImageModal(`/images/creations/${creation.id}/image-2.jpg`, `${creation.title} - Image 2`)"
+						>
+							<img
+								:src="`/images/creations/${creation.id}/image-2.jpg`"
+								:alt="`${creation.title} - Image 2`"
+								class="detail-image"
+							>
+						</button>
+					</div>
+
 					<div class="intro-card">
 						<p class="intro-text">
 							{{ creation.intro_text }}
@@ -91,7 +146,7 @@ onMounted(async () => {
 								rel="noopener noreferrer"
 								class="creation-btn"
 							>
-								itch.io
+								Itch.io
 							</a>
 							<a
 								v-if="creation.drivethru_link !== null"
@@ -100,7 +155,16 @@ onMounted(async () => {
 								rel="noopener noreferrer"
 								class="creation-btn"
 							>
-								drivethrurpg
+								DriveThruRPG
+							</a>
+							<a
+								v-if="creation.rpg_trader_link"
+								:href="creation.rpg_trader_link"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="creation-btn"
+							>
+								RPG Trader
 							</a>
 						</div>
 					</div>
@@ -118,18 +182,17 @@ onMounted(async () => {
 						{{ creation.second_para }}
 					</p>
 
-					<div class="images-container">
-						<img
-							:src="`/images/creations/${creation.id}/image-1.jpg`"
-							:alt="`${creation.title} - Image 1`"
-							class="detail-image"
-						>
-						<img
-							:src="`/images/creations/${creation.id}/image-2.jpg`"
-							:alt="`${creation.title} - Image 2`"
-							class="detail-image"
-						>
-					</div>
+					<Transition
+						name="image-modal"
+						appear
+					>
+						<AppImageModal
+							v-if="showImageModal"
+							:image-src="currentModalImageSrc"
+							:title="currentModalImageTitle"
+							@close="closeImageModal"
+						/>
+					</Transition>
 				</div>
 			</div>
 		</section>
@@ -226,7 +289,7 @@ section {
 .images-container {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
+	margin-top: 0;
   margin-bottom: 1.5rem;
   max-width: 70%;
   margin-left: auto;
@@ -240,16 +303,38 @@ section {
   }
 }
 
+.image-trigger {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	display: block;
+	width: calc(50% - 0.5rem);
+	border-radius: 0.5rem;
+	line-height: 0;
+	text-align: left;
+}
+
+.image-trigger:focus-visible {
+	outline: 3px solid var(--secondary-color);
+	outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+	.image-trigger {
+		width: 100%;
+	}
+}
+
 .detail-image {
-  width: calc(50% - 0.5rem);
+	width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  max-width: 28rem;
+	display: block;
 }
 
 @media (max-width: 768px) {
   .detail-image {
-    width: 100%;
     margin: 0 auto;
   }
 }
@@ -259,7 +344,7 @@ section {
   border: 2px solid var(--primary-color-light);
   border-radius: 0.5rem;
   padding: 1rem;
-  margin-top: 2rem;
+	margin-top: 0;
   margin-bottom: 2rem;
 }
 

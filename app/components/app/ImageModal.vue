@@ -76,8 +76,8 @@ onMounted(() => {
   height: 2rem;
   justify-content: center;
   position: absolute;
-  top: 0.25rem;
-  right: 0.25rem;  
+  top: 0.5rem;
+  right: 0.5rem;
   width: 2rem;
   line-height: 1;
 }
