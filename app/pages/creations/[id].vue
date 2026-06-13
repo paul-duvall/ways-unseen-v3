@@ -173,7 +173,7 @@ onUnmounted(() => {
 						v-if="creation.has_physical"
 						style="border: 2px dashed white; padding: 10px; max-width: 30rem; margin: 0 auto 1rem; text-align: center;"
 					>
-						<strong>Physical copies available for delivery within the UK (email ways.unseen@gmail.com for more info)!</strong>
+						<strong>Physical copies available within the UK. <NuxtLink :to="{ path: '/uk-orders', query: { creationId: creation.id } }">Click here</NuxtLink> or email ways.unseen@gmail.com to find out more!</strong>
 					</p>
 					<p
 						v-if="creation.second_para"

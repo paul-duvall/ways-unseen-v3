@@ -3,6 +3,13 @@ import InfoPopover from "~/components/app/InfoPopover.vue"
 
 useHead({ title: "UK Orders" })
 
+const route = useRoute()
+const creationId = computed(() => {
+	const value = route.query.creationId
+	return typeof value === "string" ? value : ""
+})
+const backToCreationHref = computed(() => creationId.value ? `/creations/${creationId.value}` : "/creations")
+
 const formStatus = ref("")
 const isSubmitting = ref(false)
 
@@ -43,9 +50,18 @@ const handleSubmit = async (event: Event) => {
 	<div class="container">
 		<main class="uk-orders">
 			<section class="section-container">
-				<h1 class="uk-orders-title">
-					UK Orders
-				</h1>
+				<div class="title-header">
+					<h1 class="uk-orders-title">
+						UK Orders
+					</h1>
+					<NuxtLink
+						v-if="creationId"
+						:to="backToCreationHref"
+						class="back-button"
+					>
+						← Back to Creation
+					</NuxtLink>
+				</div>
 				<p>
 					If you're in the UK and are interested in ordering some physical products from me,
 					complete the following form. I'll let you know the total cost, including postage,
@@ -143,6 +159,14 @@ const handleSubmit = async (event: Event) => {
 								>
 								Four Adventure Bookmarks - £5
 							</label>
+							<label>
+								<input
+									type="checkbox"
+									name="new-york-zombies"
+									value="yes"
+								>
+								New York Zombies - £5
+							</label>
 						</div>
 					</fieldset>
 					<div class="uk-orders-field">
@@ -188,6 +212,7 @@ const handleSubmit = async (event: Event) => {
 
 <style scoped>
 .container {
+background-color: var(--primary-color-dark);
 padding: 2rem;
 }
 
@@ -197,9 +222,41 @@ padding: 1rem;
 }
 }
 
+.title-header {
+display: grid;
+grid-template-columns: 1fr auto;
+align-items: center;
+margin-bottom: 1.5rem;
+}
+
 .uk-orders-title {
+grid-column: 1 / -1;
+margin: 0;
 text-align: center;
 color: var(--secondary-color);
+}
+
+.back-button {
+display: inline-block;
+background-color: transparent;
+color: var(--primary-color-light);
+border: 2px solid var(--primary-color-light);
+text-decoration: none;
+padding: 0.4rem 0.8rem;
+border-radius: 0.3rem;
+transition: all 0.3s ease;
+white-space: nowrap;
+font-weight: 500;
+font-size: 0.9rem;
+justify-self: end;
+grid-column: 2;
+grid-row: 1;
+}
+
+.back-button:hover,
+.back-button:focus {
+background-color: var(--primary-color-light);
+color: white;
 }
 
 .uk-orders p {
