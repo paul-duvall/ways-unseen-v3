@@ -23,6 +23,17 @@
     "has_physical": false
   },
   {
+    "id": "village-emporium-fae-forest",
+    "title": "Village Emporium - Fae Forest",
+    "blurb": "A expansion that add an exciting new area to the solo roll-and-write game of fantasy commerce more challenging",
+    "intro_text": "Village Emporium Fae Forest introduces the the magical fairy realm to the solo roll and write. It adds a new area to the Village Emporium map, along with Fairy Queens, each of which has a unique effect on gameplay, and a table of Orc events that'll make foraging in the fae forest unpredictable.",
+    "second_para": "Business is good at the Village Emporium – the shop is well-stocked thanks to plentiful foraging opportunities and the great relationships you have developed with local traders. You have heard rumours of a magical forest beyond the valley where spirits dwell close to the realm of man.",
+    "itch_link": "https://ways-unseen.itch.io/village-emporium-fae-forest",
+    "drivethru_link": null,
+    "category": "games",
+    "has_physical": false
+  },
+  {
     "id": "d12-locations",
     "title": "D12 Locations",
     "blurb": "A collection of twelve unusual small locations for use in fantasy tabletop games",
