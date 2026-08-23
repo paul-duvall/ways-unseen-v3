@@ -98,7 +98,7 @@ const handleSubmit = async (event: Event) => {
 									name="d12-locations"
 									value="yes"
 								>
-								D12 Locations zine - £10
+								D12 Locations zine - £8
 							</label>
 							<label>
 								<input
@@ -106,7 +106,7 @@ const handleSubmit = async (event: Event) => {
 									name="d12-locations-2"
 									value="yes"
 								>
-								D12 Locations II zine - £10
+								D12 Locations II zine - £8
 							</label>
 							<label>
 								<input
@@ -114,7 +114,7 @@ const handleSubmit = async (event: Event) => {
 									name="mini-cave"
 									value="yes"
 								>
-								Mini Cave zine - £6
+								Mini Cave zine - £5
 								<InfoPopover text="This zine contains maps and tables from the Subterranean Map Pack." />
 							</label>
 							<label>
@@ -123,7 +123,7 @@ const handleSubmit = async (event: Event) => {
 									name="dungeon-tiles-1"
 									value="yes"
 								>
-								Dungeon Tiles Set 1 - £6
+								Dungeon Tiles Set 1 - £7
 								<InfoPopover text="The Dungeon Tile Set is split into two physical packs, each containing 13 cards." />
 							</label>
 							<label>
@@ -132,7 +132,7 @@ const handleSubmit = async (event: Event) => {
 									name="dungeon-tiles-2"
 									value="yes"
 								>
-								Dungeon Tiles Set 2 - £6
+								Dungeon Tiles Set 2 - £7
 							</label>
 							<label>
 								<input
@@ -140,7 +140,7 @@ const handleSubmit = async (event: Event) => {
 									name="forest-tiles-1"
 									value="yes"
 								>
-								Forest Tiles Set 1 - £6
+								Forest Tiles Set 1 - £7
 								<InfoPopover text="The Forest Tile Set is split into two physical packs, each containing 13 cards." />
 							</label>
 							<label>
@@ -149,7 +149,7 @@ const handleSubmit = async (event: Event) => {
 									name="forest-tiles-2"
 									value="yes"
 								>
-								Forest Tiles Set 2 - £6
+								Forest Tiles Set 2 - £7
 							</label>
 							<label>
 								<input
@@ -157,7 +157,7 @@ const handleSubmit = async (event: Event) => {
 									name="four-adventure-bookmarks"
 									value="yes"
 								>
-								Four Adventure Bookmarks - £5
+								Four Adventure Bookmarks - £6
 							</label>
 							<label>
 								<input
