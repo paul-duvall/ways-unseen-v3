@@ -101,12 +101,12 @@
     "has_physical": true
   },
   {
-    "id": "map-pack-1",
-    "title": "Ways Unseen Map Pack",
-    "blurb": "Eight location maps for tabletop gaming",
-    "intro_text": "The first map pack from cartographer Ways Unseen contains eight lovingly hand-drawn top-down and isometric maps portraying a range of locations including dungeons, a forest fort and cave systems. Included are four larger maps (with two version of each - keyed and non-keyed) and four smaller maps, each with keys and non-keyed versions.",
-    "second_para": "I hope you enjoy using these maps as much as I enjoy creating them! I take my time drawing my maps and each one represents hours of careful crafting. I take pleasure in creating spaces that are hopefully a little bit different compared to other tabletop gaming locations.",
-    "itch_link": "https://ways-unseen.itch.io/map-pack",
+    "id": "free-map-pack",
+    "title": "Ways Unseen Free Map Pack",
+    "blurb": "Five little topdown maps",
+    "intro_text": "Need a little map for a tabletop project? Well this map pack contains five! You are welcome to make a donation, but do not hesitate to use them without payment if you need to.",
+    "second_para": "I ask that you rate this product if you like it (and any of my others if you happen to have purchased / downloaded those!) to enable others to find it more easily.",
+    "itch_link": "https://ways-unseen.itch.io/free-map-pack",
     "drivethru_link": null,
     "category": "maps"
   },
