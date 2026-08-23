@@ -1,14 +1,14 @@
 <script setup lang="ts">
 interface Creation {
-  id: string
-  title: string
-  blurb: string
-  category: string
+	id: string
+	title: string
+	blurb: string
+	category: string
 }
 
 const creations = ref<Creation[]>([])
 const isLoading = ref(true)
-const error = ref('')
+const error = ref("")
 
 // Filter state - all checked by default
 const showGames = ref(true)
@@ -17,81 +17,110 @@ const showResources = ref(true)
 
 // Computed filtered creations based on checkbox states
 const filteredCreations = computed(() => {
-  return creations.value.filter(creation => {
-    if (creation.category === 'games' && !showGames.value) return false
-    if (creation.category === 'maps' && !showMaps.value) return false
-    if (creation.category === 'resources' && !showResources.value) return false
-    return true
-  })
+	return creations.value.filter((creation) => {
+		if (creation.category === "games" && !showGames.value) return false
+		if (creation.category === "maps" && !showMaps.value) return false
+		if (creation.category === "resources" && !showResources.value) return false
+		return true
+	})
 })
 
 onMounted(async () => {
-  try {
-    const response = await fetch('/data/creations.json')
-    if (!response.ok) {
-      throw new Error('Failed to load creations')
-    }
-    creations.value = await response.json()
-  } catch (err) {
-    error.value = 'Unable to load creations. Please try again later.'
-    console.error('Error loading creations:', err)
-  } finally {
-    isLoading.value = false
-  }
+	try {
+		const response = await fetch("/data/creations.json")
+		if (!response.ok) {
+			throw new Error("Failed to load creations")
+		}
+		creations.value = await response.json()
+	}
+	catch (err) {
+		error.value = "Unable to load creations. Please try again later."
+		console.error("Error loading creations:", err)
+	}
+	finally {
+		isLoading.value = false
+	}
 })
 </script>
 
 <template>
-  <div class="container">
-    <section>
-      <h2>Creations</h2>
-      <p class="intro">
-        I have created a range of tabletop resources and solo games, available digitally, many featuring my maps and illustrations. Explore below and click through to itch.io or drivethrurpg if you'd like to find out more about any of them or to purchase a copy!
-      </p>
+	<div class="container">
+		<section>
+			<h2>Creations</h2>
+			<p class="intro">
+				I have created a range of tabletop resources and solo games, available digitally, many featuring my maps and illustrations. Explore below and click through to itch.io or drivethrurpg if you'd like to find out more about any of them or to purchase a copy!
+			</p>
+			<p class="intro">
+				Some of these items are available for physical purchase within the UK - noted on each product page (<NuxtLink to="/uk-orders">click here</NuxtLink> for the UK sales contact form).
+			</p>
 
-      <AppLoadingSpinner v-if="isLoading" />
+			<AppLoadingSpinner v-if="isLoading" />
 
-      <div v-else-if="error" class="status-message error">
-        {{ error }}
-      </div>
+			<div
+				v-else-if="error"
+				class="status-message error"
+			>
+				{{ error }}
+			</div>
 
-      <div v-else>
-        <div class="filter-section">
-          <label class="filter-checkbox">
-            <input type="checkbox" v-model="showGames" />
-            <span>Solo games</span>
-          </label>
-          <label class="filter-checkbox">
-            <input type="checkbox" v-model="showMaps" />
-            <span>Maps etc</span>
-          </label>
-          <label class="filter-checkbox">
-            <input type="checkbox" v-model="showResources" />
-            <span>Other tabletop resources</span>
-          </label>
-        </div>
+			<div v-else>
+				<div class="filter-section">
+					<label class="filter-checkbox">
+						<input
+							v-model="showGames"
+							type="checkbox"
+						>
+						<span>Solo games</span>
+					</label>
+					<label class="filter-checkbox">
+						<input
+							v-model="showMaps"
+							type="checkbox"
+						>
+						<span>Maps etc</span>
+					</label>
+					<label class="filter-checkbox">
+						<input
+							v-model="showResources"
+							type="checkbox"
+						>
+						<span>Other tabletop resources</span>
+					</label>
+				</div>
 
-        <div v-if="filteredCreations.length === 0" class="status-message">
-          Select at least one category to see some creations
-        </div>
+				<div
+					v-if="filteredCreations.length === 0"
+					class="status-message"
+				>
+					Select at least one category to see some creations
+				</div>
 
-        <TransitionGroup v-else name="card-list" tag="div" class="creations-grid">
-          <NuxtLink 
-            v-for="creation in filteredCreations" 
-            :key="creation.id" 
-          :to="`/creations/${creation.id}`" 
-          class="creation-card"
-        >
-          <img :src="`/images/creations/${creation.id}/thumbnail.png`" :alt="creation.title" class="creation-image" />
-          <div class="card-content">
-            <h3 class="creation-title">{{ creation.title }}</h3>
-            <p class="creation-blurb">{{ creation.blurb }}</p>
-          </div>
-        </NuxtLink>
-        </TransitionGroup>
-      </div>
-    </section>
-  </div>
+				<TransitionGroup
+					v-else
+					name="card-list"
+					tag="div"
+					class="creations-grid"
+				>
+					<NuxtLink
+						v-for="creation in filteredCreations"
+						:key="creation.id"
+						:to="`/creations/${creation.id}`"
+						class="creation-card"
+					>
+						<img
+							:src="`/images/creations/${creation.id}/thumbnail.png`"
+							:alt="creation.title"
+							class="creation-image"
+						>
+						<div class="card-content">
+							<h3 class="creation-title">{{ creation.title }}</h3>
+							<p class="creation-blurb">{{ creation.blurb }}</p>
+						</div>
+					</NuxtLink>
+				</TransitionGroup>
+			</div>
+		</section>
+	</div>
 </template>
 
 <style scoped>
