@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import commissionsData from "~/data/commissions.json"
+
 interface Commission {
   id: string
   title: string
@@ -7,29 +9,12 @@ interface Commission {
   cara_link?: string
 }
 
-const commissions = ref<Commission[]>([])
-const isLoading = ref(true)
-const error = ref('')
+const commissions = commissionsData as Commission[]
 
 const hasUrl = (url?: string): boolean => {
   return Boolean(url && url.trim())
 }
 
-onMounted(async () => {
-  try {
-    const response = await fetch('/data/commissions.json')
-    if (!response.ok) {
-      throw new Error('Failed to load commissions')
-    }
-
-    commissions.value = await response.json()
-  } catch (err) {
-    error.value = 'Unable to load past commissions. Please try again later.'
-    console.error('Error loading commissions:', err)
-  } finally {
-    isLoading.value = false
-  }
-})
 </script>
 
 <template>
@@ -44,13 +29,7 @@ onMounted(async () => {
         if you'd like to discuss a map you need for your project.
       </p>
 
-      <AppLoadingSpinner v-if="isLoading" />
-
-      <div v-else-if="error" class="status-message error">
-        {{ error }}
-      </div>
-
-      <div v-else-if="commissions.length === 0" class="status-message">
+      <div v-if="commissions.length === 0" class="status-message">
         No past commissions available yet.
       </div>
 

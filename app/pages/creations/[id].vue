@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { nextTick, onMounted, onUnmounted, ref } from "vue"
+import creationsData from "~/data/creations.json"
 
 interface Creation {
 	id: string
@@ -16,9 +17,7 @@ interface Creation {
 const route = useRoute()
 const creationId = route.params.id as string
 
-const creation = ref<Creation | null>(null)
-const isLoading = ref(true)
-const notFound = ref(false)
+const creation = computed(() => (creationsData as Creation[]).find(item => item.id === creationId) ?? null)
 const showImageModal = ref(false)
 const currentModalImageSrc = ref("")
 const currentModalImageTitle = ref("")
@@ -40,31 +39,6 @@ function closeImageModal() {
 	})
 }
 
-onMounted(async () => {
-	try {
-		const response = await fetch("/data/creations.json")
-		if (!response.ok) {
-			throw new Error("Failed to load creations")
-		}
-		const creations: Creation[] = await response.json()
-		const found = creations.find(c => c.id === creationId)
-
-		if (found) {
-			creation.value = found
-		}
-		else {
-			notFound.value = true
-		}
-	}
-	catch (err) {
-		console.error("Error loading creation:", err)
-		notFound.value = true
-	}
-	finally {
-		isLoading.value = false
-	}
-})
-
 onUnmounted(() => {
 	previousActiveElement = null
 	showImageModal.value = false
@@ -74,10 +48,8 @@ onUnmounted(() => {
 <template>
 	<div class="container">
 		<section>
-			<AppLoadingSpinner v-if="isLoading" />
-
 			<div
-				v-else-if="notFound"
+				v-if="!creation"
 				class="not-found"
 			>
 				<h2>Creation Not Found</h2>
@@ -91,7 +63,7 @@ onUnmounted(() => {
 			</div>
 
 			<div
-				v-else-if="creation"
+				v-else
 				class="creation-detail"
 			>
 				<div class="detail-content">

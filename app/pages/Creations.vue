@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import creationsData from "~/data/creations.json"
+
 interface Creation {
 	id: string
 	title: string
@@ -6,9 +8,7 @@ interface Creation {
 	category: string
 }
 
-const creations = ref<Creation[]>([])
-const isLoading = ref(true)
-const error = ref("")
+const creations = creationsData as Creation[]
 
 // Filter state - all checked by default
 const showGames = ref(true)
@@ -17,29 +17,12 @@ const showResources = ref(true)
 
 // Computed filtered creations based on checkbox states
 const filteredCreations = computed(() => {
-	return creations.value.filter((creation) => {
+	return creations.filter((creation) => {
 		if (creation.category === "games" && !showGames.value) return false
 		if (creation.category === "maps" && !showMaps.value) return false
 		if (creation.category === "resources" && !showResources.value) return false
 		return true
 	})
-})
-
-onMounted(async () => {
-	try {
-		const response = await fetch("/data/creations.json")
-		if (!response.ok) {
-			throw new Error("Failed to load creations")
-		}
-		creations.value = await response.json()
-	}
-	catch (err) {
-		error.value = "Unable to load creations. Please try again later."
-		console.error("Error loading creations:", err)
-	}
-	finally {
-		isLoading.value = false
-	}
 })
 </script>
 
@@ -54,16 +37,7 @@ onMounted(async () => {
 				Some of these items are available for physical purchase within the UK - noted on each product page (<NuxtLink to="/uk-orders">click here</NuxtLink> for the UK sales contact form).
 			</p>
 
-			<AppLoadingSpinner v-if="isLoading" />
-
-			<div
-				v-else-if="error"
-				class="status-message error"
-			>
-				{{ error }}
-			</div>
-
-			<div v-else>
+			<div>
 				<div class="filter-section">
 					<label class="filter-checkbox">
 						<input
