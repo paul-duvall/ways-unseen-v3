@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import InfoPopover from "~/components/app/InfoPopover.vue"
 
-useHead({ title: "UK Orders" })
+useSeoMeta({
+	title: "UK Orders",
+	description: "Enquire about ordering physical Ways Unseen tabletop games, zines, and map products in the UK.",
+})
 
 const route = useRoute()
 const creationId = computed(() => {

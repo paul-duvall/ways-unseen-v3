@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import creationsData from "~/data/creations.json"
 
+useSeoMeta({
+	title: "Creations",
+	description: "Explore Ways Unseen tabletop games, fantasy maps, and resources, with links to digital and UK physical editions.",
+})
+
 interface Creation {
 	id: string
 	title: string
@@ -29,7 +34,7 @@ const filteredCreations = computed(() => {
 <template>
 	<div class="container">
 		<section>
-			<h2>Creations</h2>
+			<h1>Creations</h1>
 			<p class="intro">
 				I have created a range of tabletop resources and solo games, available digitally, many featuring my maps and illustrations. Explore below and click through to itch.io or drivethrurpg if you'd like to find out more about any of them or to purchase a copy!
 			</p>
@@ -109,8 +114,10 @@ const filteredCreations = computed(() => {
   }
 }
 
-h2 {
+h1 {
   text-align: center;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 

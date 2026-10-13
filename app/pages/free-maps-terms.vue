@@ -1,8 +1,15 @@
+<script setup lang="ts">
+useSeoMeta({
+	title: "Free Map Pack Terms of Use",
+	description: "Read the terms for using the Ways Unseen Free Map Pack in personal and commercial tabletop projects.",
+})
+</script>
+
 <template>
     <div class="container">
         <section>
-            <h2>Free Map Pack - Terms of use</h2>
-            <h3>The short version:</h3>
+            <h1>Free Map Pack - Terms of Use</h1>
+            <h2>The short version</h2>
             <p>
                 You can use the maps in the Free Map Pack by <em>Ways Unseen</em> for personal use or in commercial projects,
                 including role-playing and tabletop games or resources.
@@ -12,7 +19,7 @@
                 If subsequently this is found not to be the case, all rights are terminated.
             </p>
 
-            <h3>The long version:</h3>
+            <h2>The long version</h2>
             <p>These images may be used under the terms of the following non-exclusive license:</p>
             <p>
                 You may use the images in products either for print or web distribution, along with associated advertising.
@@ -79,8 +86,14 @@
         padding: 1rem;
     }
 }
+h1,
 h2 {
     text-align: center;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
 }
 section {
     margin: 0 auto 2rem;

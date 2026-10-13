@@ -18,6 +18,11 @@ const route = useRoute()
 const creationId = route.params.id as string
 
 const creation = computed(() => (creationsData as Creation[]).find(item => item.id === creationId) ?? null)
+
+useSeoMeta({
+	title: () => creation.value ? creation.value.title : "Creation Not Found",
+	description: () => creation.value?.blurb ?? "Explore tabletop games, fantasy maps, and resources by Ways Unseen.",
+})
 const showImageModal = ref(false)
 const currentModalImageSrc = ref("")
 const currentModalImageTitle = ref("")
@@ -52,7 +57,7 @@ onUnmounted(() => {
 				v-if="!creation"
 				class="not-found"
 			>
-				<h2>Creation Not Found</h2>
+				<h1>Creation Not Found</h1>
 				<p>Sorry, we couldn't find the creation you're looking for.</p>
 				<NuxtLink
 					to="/creations"
@@ -68,7 +73,7 @@ onUnmounted(() => {
 			>
 				<div class="detail-content">
 					<div class="title-header">
-						<h2>{{ creation.title }}</h2>
+						<h1>{{ creation.title }}</h1>
 						<NuxtLink
 							to="/creations"
 							class="back-button"
@@ -183,8 +188,10 @@ onUnmounted(() => {
   }
 }
 
-h2 {
+h1 {
   text-align: center;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -198,7 +205,7 @@ section {
   padding: 2rem 0;
 }
 
-.not-found h2 {
+.not-found h1 {
   color: var(--secondary-color);
 }
 
@@ -221,10 +228,11 @@ section {
   }
 }
 
-.detail-content h2 {
+.detail-content h1 {
   margin-top: 0;
   margin-bottom: 0;
   color: var(--primary-color-lightest);
+  font-size: 1.5rem;
   border-bottom: 3px solid var(--secondary-color);
   padding-bottom: 0.5rem;
   text-align: left;
@@ -232,7 +240,7 @@ section {
 }
 
 @media (max-width: 768px) {
-  .detail-content h2 {
+  .detail-content h1 {
     display: block;
     width: 100%;
   }

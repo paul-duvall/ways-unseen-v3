@@ -1,7 +1,14 @@
+<script setup lang="ts">
+useSeoMeta({
+	title: "About",
+	description: "Learn about Ways Unseen, a fantasy map illustrator creating hand-drawn maps in a range of styles.",
+})
+</script>
+
 <template>
     <div class="container">
         <section>
-            <h2>About</h2>
+            <h1>About</h1>
             <p>
                 I'm a fantasy map illustrator of sorts, living in the east of England in a county called Norfolk. I've always enjoyed drawing, though for much of my life, I have shied away from actually putting pencil to paper. Now that I've started in earnest, I never want to stop!
             </p>
@@ -42,8 +49,10 @@
         padding: 1rem;
     }
 }
-h2 {
+h1 {
     text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
 }
 section {
     margin: 0 auto 2rem;

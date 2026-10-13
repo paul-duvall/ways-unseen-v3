@@ -1,4 +1,9 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Contact',
+  description: 'Contact Ways Unseen about a hand-drawn map commission, project, or other enquiry.',
+})
+
 const formStatus = ref('')
 const isSubmitting = ref(false)
 

@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import commissionsData from "~/data/commissions.json"
 
+useSeoMeta({
+  title: 'Past Commissions',
+  description: 'Browse hand-drawn fantasy maps created by Ways Unseen for gamebooks, board games, RPG supplements, and other projects.',
+})
+
 interface Commission {
   id: string
   title: string
@@ -20,7 +25,7 @@ const hasUrl = (url?: string): boolean => {
 <template>
   <div class="container">
     <section>
-      <h2>Past Commissions</h2>
+      <h1>Past Commissions</h1>
       <p class="intro">
         I've been commissioned to draw maps for all kinds of products, including gamebooks, board games, rpg supplements and adventures. Hover or click the cards below to find out more. You can find out more about
         <NuxtLink to="/commissions">my commission process here</NuxtLink>
@@ -91,8 +96,10 @@ section {
   max-width: 70rem;
 }
 
-h2 {
+h1 {
   text-align: center;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 

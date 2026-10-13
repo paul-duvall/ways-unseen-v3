@@ -1,3 +1,10 @@
+<script setup lang="ts">
+useSeoMeta({
+	title: "Map Commissions",
+	description: "Commission a hand-drawn fantasy map from Ways Unseen. Learn about map styles, the commission process, and how to get in touch.",
+})
+</script>
+
 <template>
     <div class="container">
         <picture>
@@ -5,7 +12,7 @@
             <img src="/images/commission-banner.jpg" alt="Work in progress images" class="top-image" />
         </picture>
         <section>
-            <h2>Commissions</h2>
+            <h1>Commissions</h1>
             <p>
                 If you've found your way to this page, you're probably considering commissioning me to draw your map. Thank you!
             </p>
@@ -65,8 +72,14 @@ section {
     margin: 0 auto 2rem;
     max-width: 45rem;
 }
-h2 {
+h1,
+section h2 {
     text-align: center;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
 }
 li {
     margin-bottom: 0.75rem;   

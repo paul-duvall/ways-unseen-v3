@@ -1,6 +1,11 @@
 <script setup>
 import { ref, nextTick, onUnmounted } from 'vue'
 
+useSeoMeta({
+    title: "Hand-Drawn Fantasy Maps",
+    description: "Ways Unseen creates hand-drawn fantasy maps of dungeons, strange lands, and unexpected places.",
+})
+
 const showImageModal = ref(false)
 const modalTrigger = ref(null)
 let previousActive = null
