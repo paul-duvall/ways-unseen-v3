@@ -72,11 +72,16 @@ onUnmounted(() => {
 
 <template>
     <div class="page-container">
-        <img
-            src="/images/banner.jpg"
-            alt="Ways Unseen Homepage Banner"
-            class="hero-image"
-        >
+        <picture class="hero-image">
+            <source
+                media="(max-width: 768px)"
+                srcset="/images/banner-sm.jpg"
+            >
+            <img
+                src="/images/banner.jpg"
+                alt="Ways Unseen Homepage Banner"
+            >
+        </picture>
         <div class="social-links-mobile">
             <AppSocialLinks light />
         </div>
