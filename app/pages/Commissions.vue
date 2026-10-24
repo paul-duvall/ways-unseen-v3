@@ -17,7 +17,7 @@ useSeoMeta({
                 If you've found your way to this page, you're probably considering commissioning me to draw your map. Thank you!
             </p>
             <p>
-                The illustrations I create for my clients are typically either isometric or top-down maps, though I have created maps in other styles. If you're curious about the range of styles I employ, check out my <a href="https://cara.app/waysunseen/portfolio" target="_blank">Cara Portfolio</a> - there are examples of all the kinds of maps I draw, including a number of previous commissions!
+                The illustrations I create for my clients are typically either isometric or top-down maps, though I have created maps in other styles. If you're curious about the range of styles I employ, check out my <NuxtLink to="/past-commissions">previous commissions</NuxtLink>!
             </p>
             <p>
                 If you would like to discuss further you can complete the <NuxtLink to="/Contact">contact form</NuxtLink>, email me at <a href="mailto:ways.unseen@gmail.com">ways.unseen@gmail.com</a> or drop me a message (<a href="https://bsky.app/profile/ways.unseen.bsky.social" target="_blank">Bluesky</a> or <a href="https://www.instagram.com/ways.unseen/" target="_blank">Instagram</a>).
