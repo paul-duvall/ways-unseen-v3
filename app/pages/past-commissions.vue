@@ -66,7 +66,7 @@ const hasUrl = (url?: string): boolean => {
                 rel="noopener noreferrer"
                 class="action-link"
               >
-                View item
+                View product
               </a>
               <a
                 v-if="hasUrl(commission.cara_link)"
