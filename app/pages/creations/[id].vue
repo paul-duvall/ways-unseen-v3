@@ -118,6 +118,7 @@ onUnmounted(() => {
 						</p>
 						<div class="button-container">
 							<a
+								v-if="creation.itch_link !== null"
 								:href="creation.itch_link"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -125,6 +126,14 @@ onUnmounted(() => {
 							>
 								Itch.io
 							</a>
+							<span
+								v-else-if="creation.drivethru_link === null"
+								class="creation-btn creation-btn-disabled"
+								title="coming soon"
+								aria-disabled="true"
+							>
+								Itch.io
+							</span>
 							<a
 								v-if="creation.drivethru_link !== null"
 								:href="creation.drivethru_link"
@@ -369,5 +378,9 @@ section {
 .creation-btn:hover,
 .creation-btn:focus {
   filter: brightness(0.85);
+}
+
+.creation-btn-disabled {
+  cursor: not-allowed;
 }
 </style>

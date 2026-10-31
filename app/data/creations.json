@@ -131,5 +131,15 @@
     "rpg_trader_link": "https://rpg-trader.com/products/3550/new-york-zombies",
     "category": "games",
     "has_physical": true
+  },
+  {
+    "id": "ruined-words-1",
+    "title": "Ruined Words - Issue 1 (by Alex Minns)",
+    "blurb": "A collection of speculative tales inspired by forgotten places",
+    "intro_text": "Contains four speculative stories by Alex Minns based on Norfolk sites including the Witch’s Leg of East Somerton. Some existing folklore plays a part and some is brand new. Includes a new map from Ways Unseen.",
+    "second_para": null,
+    "itch_link": null,
+    "drivethru_link": null,
+    "category": "resources"
   }
 ]
