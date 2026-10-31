@@ -140,6 +140,7 @@
     "second_para": null,
     "itch_link": null,
     "drivethru_link": null,
-    "category": "resources"
+    "category": "resources",
+    "has_physical": true
   }
 ]

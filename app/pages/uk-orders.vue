@@ -170,6 +170,14 @@ const handleSubmit = async (event: Event) => {
 								>
 								New York Zombies - £5
 							</label>
+							<label>
+								<input
+									type="checkbox"
+									name="ruined-words-1"
+									value="yes"
+								>
+								Ruined Words - Issue 1 - £6
+							</label>
 						</div>
 					</fieldset>
 					<div class="uk-orders-field">
