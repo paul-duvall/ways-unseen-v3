@@ -65,5 +65,20 @@
         <input type="checkbox" name="ruined-words-1" value="yes" />
       </div>
     </form>
+    <form
+      name="ruined-words"
+      data-netlify="true"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="ruined-words" />
+      <div>
+        <label for="ruined-words-email">Email</label>
+        <input id="ruined-words-email" name="email" type="email" required />
+      </div>
+      <div>
+        <label for="ruined-words-comments">Comments / Questions</label>
+        <textarea id="ruined-words-comments" name="comments" rows="5"></textarea>
+      </div>
+    </form>
   </body>
 </html>
