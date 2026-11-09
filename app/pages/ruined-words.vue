@@ -106,7 +106,7 @@ const handleSubmit = async (event: Event) => {
 					<input id="ruined-words-email" name="email" type="email" autocomplete="email" required>
 				</div>
 				<div class="field">
-					<label for="ruined-words-comments">Comments / Questions</label>
+					<label for="ruined-words-comments">Additional Order Notes</label>
 					<textarea id="ruined-words-comments" name="comments" rows="5" />
 				</div>
 				<div class="submit-row">
