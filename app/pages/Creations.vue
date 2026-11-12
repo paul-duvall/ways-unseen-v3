@@ -15,18 +15,15 @@ interface Creation {
 
 const creations = creationsData as Creation[]
 
-// Filter state - all checked by default
-const showGames = ref(true)
-const showMaps = ref(true)
-const showResources = ref(true)
+type CreationFilter = "all" | "games" | "maps" | "resources"
+
+// A single selected category keeps the filter mutually exclusive.
+const selectedFilter = ref<CreationFilter>("all")
 
 // Computed filtered creations based on checkbox states
 const filteredCreations = computed(() => {
 	return creations.filter((creation) => {
-		if (creation.category === "games" && !showGames.value) return false
-		if (creation.category === "maps" && !showMaps.value) return false
-		if (creation.category === "resources" && !showResources.value) return false
-		return true
+		return selectedFilter.value === "all" || creation.category === selectedFilter.value
 	})
 })
 </script>
@@ -44,26 +41,41 @@ const filteredCreations = computed(() => {
 
 			<div>
 				<div class="filter-section">
-					<label class="filter-checkbox">
+					<label class="filter-option">
 						<input
-							v-model="showGames"
-							type="checkbox"
+							v-model="selectedFilter"
+							value="all"
+							name="creation-filter"
+							type="radio"
+						>
+						<span>All</span>
+					</label>
+					<label class="filter-option">
+						<input
+							v-model="selectedFilter"
+							value="games"
+							name="creation-filter"
+							type="radio"
 						>
 						<span>Solo games</span>
 					</label>
-					<label class="filter-checkbox">
+					<label class="filter-option">
 						<input
-							v-model="showMaps"
-							type="checkbox"
+							v-model="selectedFilter"
+							value="maps"
+							name="creation-filter"
+							type="radio"
 						>
 						<span>Maps etc</span>
 					</label>
-					<label class="filter-checkbox">
+					<label class="filter-option">
 						<input
-							v-model="showResources"
-							type="checkbox"
+							v-model="selectedFilter"
+							value="resources"
+							name="creation-filter"
+							type="radio"
 						>
-						<span>Other tabletop resources</span>
+						<span>Other resources</span>
 					</label>
 				</div>
 
@@ -71,7 +83,7 @@ const filteredCreations = computed(() => {
 					v-if="filteredCreations.length === 0"
 					class="status-message"
 				>
-					Select at least one category to see some creations
+					No creations found in this category.
 				</div>
 
 				<TransitionGroup
@@ -144,7 +156,7 @@ section {
   max-width: 32rem;
 }
 
-.filter-checkbox {
+.filter-option {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -153,14 +165,14 @@ section {
   color: var(--text-color);
 }
 
-.filter-checkbox input[type="checkbox"] {
+.filter-option input[type="radio"] {
   cursor: pointer;
   width: 1.1rem;
   height: 1.1rem;
   accent-color: var(--secondary-color);
 }
 
-.filter-checkbox:hover span {
+.filter-option:hover span {
   color: var(--primary-color-lightest);
 }
 
